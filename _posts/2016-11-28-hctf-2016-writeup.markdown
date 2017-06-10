@@ -1,0 +1,97 @@
+---
+layout:     post
+title:      "HCTF 2016 Writeup"
+subtitle:   "hctf{xxxxxxxxxxxxx}"
+date:       2016-11-28 00:53 +0800
+author:     "gsfish"
+header-img: "img/post-bg-hacker.jpg"
+tags:
+    - CTF
+---
+
+> 纪念第一次打 CTF，虽然只解出来 4 题 Orz
+
+# Level-1
+
+---
+
+## 0x01 MISC 杂项签到
+
+这道题给了一个 pcapng 格式的数据包，在 Wireshark 中打开。
+
+![01.png](/img/hctf-2016-writeup/01.png)
+
+发现了两个 HTTP 包和很多的 TCP 包，HTTP 包观察了半天没发现什么，于是便从 TCP 包下手。使用 Wireshark 追踪 TCP 流，结果如下所示。
+
+![02.png](/img/hctf-2016-writeup/02.png)
+
+目测这是一连串与后门通信的过程，过程中查看了一个名为 flag 文件的内容。应该是用 Base64 编码了，然而解码后是乱码，于是继续翻一个个数据包。
+
+![03.png](/img/hctf-2016-writeup/03.png)
+
+找到了一段 Python，导出后发现是一段 AES 加解密的代码，稍作修改，将其中的密文改为
+
+`base64.b64decode('mbZoEMrhAO0WWeugNjqNw3U6Tt2C+rwpgpbdWRZgfQI3MAh0sZ9qjnziUKkV90XhAOkIs/OXoYVw5uQDjVvgNA==')`
+
+运行 Get flag~
+
+![04.png](/img/hctf-2016-writeup/04.png)
+
+## 0x02 Web 2009年的flag
+
+打开页面后出现这么一句话
+
+![05.png](/img/hctf-2016-writeup/05.png)
+
+于是乎祭出 Burp Suite 抓包将 UA 改成 iOS 99 的
+
+`User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 99 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10B350 Safari/8536.25`
+
+![06.png](/img/hctf-2016-writeup/06.png)
+
+试了半天就是没看到 flag，还在请求头中加了 Date。后来仔细一看原来 flag 就在响应头中，一直没看到…
+
+# Level-2
+
+---
+
+## 0x03 Web RESTFUL
+
+打开页面有福利~
+
+![07.png](/img/hctf-2016-writeup/07.png)
+
+明显的提示呀，最初想到的是用 HTTP 的 PUT 放个 money.txt 上去。发了一个 OPTIONS 请求后发现对方服务器并不支持 PUT，而且也 PUT 不上去，思路中断…
+
+后来注意到题目名为 RESTFUL，于是去网上了解了一下 RESTful 架构，找到一篇不错的文章[《理解RESTful架构》](http://www.ruanyifeng.com/blog/2011/09/restful)。
+
+突然顿悟，想起之前看页面源码的时候有这样一段 JS
+
+```js
+$.ajax({
+	type: 'GET',
+	url: "index.php/flag",
+}).done(function(r) {
+	$('#message').text(r['message']);
+}).fail(function(){
+    	console.log("Error: " + err.status);
+});
+```
+
+于是再上 Burp Suite，重新加载页面，将 JS 发送的请求修改了一下
+
+![08.png](/img/hctf-2016-writeup/08.png)
+
+在返回的页面中得到 flag~
+
+![09.png](/img/hctf-2016-writeup/09.png)
+
+## 0x04 MISC gogogo
+
+将链接下载后得到 hundouluo.nes，上网一查发现这是 FC 模拟器的文件，于是下了个 VirtuaNES。居然是魂斗罗 O_O
+
+这游戏实在太难…用金手指改成了 99 条命，然后打了一下午，终于拿到了 flag~
+
+![10.png](/img/hctf-2016-writeup/10.jpg)
+
+> 至于剩下的题嘛…表示只做出这么多了 Orz
