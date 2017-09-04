@@ -13,7 +13,7 @@ tags:
 
 今天一个朋友发过来一个 Chrome 插件，说是花了 39 块钱买的，装到 Chrome 里就能直接翻墙，让帮忙看看是否靠谱。
 
-![01.png](/img/proxy_plugin_analysis/01.png)
+![01.png](/img/proxy-plugin-analysis/01.png)
 
 # 开始研究
 
@@ -32,13 +32,13 @@ j.js
 
 `background.js` 内容如下：
 
-![02.png](/img/proxy_plugin_analysis/02.png)
+![02.png](/img/proxy-plugin-analysis/02.png)
 
 这里出现了 `startProxy()` 函数，去另一个文件里找一下。
 
 `j.js` 内容如下：
 
-![03.png](/img/proxy_plugin_analysis/03.png)
+![03.png](/img/proxy-plugin-analysis/03.png)
 
 可见 `startProxy()` 函数使用 Chrome 的 API 对浏览器代理进行了设置，其中所有的代理服务器都保存在了 `cc` 当中。直接拿到了 4 个 HTTPS 代理，除了科学上网还可以用来做其他事了。这些代理的地址没有采用从服务器获取的方式，而是硬编码在插件当中的。因此在代理失效后只能联系开发者来获取新的浏览器插件。
 
