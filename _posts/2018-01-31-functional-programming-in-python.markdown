@@ -2,7 +2,7 @@
 layout:     post
 title:      "Python 中的函数式编程"
 subtitle:   "Python 中一切好的特性都是从其他语言中借鉴来的"
-date:       2018-01-31 18:30 +0800
+date:       2018-02-10 14:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
 tags:
@@ -18,7 +18,7 @@ tags:
 * `filter`
 * `lambda`
 
-## map(func, seq)
+## `map(func, seq)`
 
 `map(func, seq)` 函数接收两个参数，一个是函数，一个是序列，`map` 将传入的函数依次作用到序列的每个元素，并把结果作为新的 `list` 返回。
 
@@ -34,7 +34,7 @@ tags:
 [1, 4, 9, 16, 25, 36, 49, 64, 81]
 ```
 
-## reduce(func, seq)
+## `reduce(func, seq)`
 
 `reduce` 把一个函数作用在一个序列 `[x1, x2, x3...]` 上，这个函数必须接收两个参数，`reduce` 把结果继续和序列的下一个元素做累积计算。
 
@@ -50,7 +50,7 @@ tags:
 25
 ```
 
-## filter(func, seq)
+## `filter(func, seq)`
 
 `filter` 用于过滤序列。`filter` 也接收一个函数和一个序列，其将传入的函数依次作用于每个元素，然后根据返回值是 `True` 还是 `False` 决定保留还是丢弃该元素。
 
@@ -66,7 +66,7 @@ tags:
 [1, 5, 9, 15]
 ```
 
-## lambda
+## `lambda`
 
 `lambda` 即 Python 中的匿名函数，`:` 左边为参数，右边为返回值的表达式。
 

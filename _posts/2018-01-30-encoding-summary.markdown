@@ -75,7 +75,7 @@ Python 中常见编码的问题主要有三个，分别为 `UnicodeEncodeError`�
 
 3. `SyntaxError` 主要发生在源码的编码与预期不符，可通过在代码开始处指定编码方式解决：
 
-```Python
+```python
 # coding: utf-8
 # 或
 # -*- coding: utf-8 -*-
@@ -85,7 +85,7 @@ Python 中常见编码的问题主要有三个，分别为 `UnicodeEncodeError`�
 
 《流畅的 Python》中有这样一段代码，可用于查看当前编码的默认值：
 
-```Python
+```python
 import sys, locale
 
 expressions = """
@@ -131,14 +131,14 @@ for expression in expressions.split():
 
 以 `MessageBox()` 为例：
 
-```C
+```c
 int MessageBoxA(HWND hWnd, const char* lpText, const char* lpCaption, unsigned int uType);
 int MessageBoxW(HWND hWnd, const wchar_t* lpText, const wchar_t* lpCaption, unsigned int uType);
 ```
 
 同时，还有一个没有后缀的 API，其具体实现取决于 `UNICODE` 宏是否定义：
 
-```C
+```c
 #ifdef UNICODE
    #define MessageBox MessageBoxW
 #else
@@ -148,7 +148,7 @@ int MessageBoxW(HWND hWnd, const wchar_t* lpText, const wchar_t* lpCaption, unsi
 
 为了迎合这个没有后缀的 API，用同样的方式定义了一个字符类型 `TCHAR`：
 
-```C
+```c
 #ifdef UNICODE
     typedef wchar_t TCHAR;
 #else
