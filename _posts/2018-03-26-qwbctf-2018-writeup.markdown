@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "HCTF 2016 Writeup"
+title:      "QWBCTF 2018 Writeup"
 subtitle:   "QWB{xxxxxxxxxxxxx}"
 date:       2018-03-26 22:00 +0800
 author:     "gsfish, ThTsOd, ydh"
