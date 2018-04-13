@@ -241,15 +241,21 @@ model.fit(x_train, y_train, n_epoch=10, shuffle=True, validation_set=0.1, batch_
 *表 2 检测结果的混淆矩阵*
 
 $$ precision = \frac{TP}{TP + FP} $$
+
 $$ recall = \frac{TP}{TP + FN} $$
+
 $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
+
 **Listing 15: Evalution metric**
 
 准确率约：0.8872，召回率约：0.9645，F-score：0.9243。
 
 $$ precision = \frac{TP}{TP + FP} $$
+
 $$ recall = \frac{TP}{TP + FN} $$
+
 $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
+
 **Listing 15: Evalution metric**
 
 通过 TensorBoard 得到了模型训练过程中 Accuracy 以及 Loss（交叉熵）的变化情况：
@@ -261,6 +267,7 @@ $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 ![loss_scalar.png](/img/cnn-webshell-detect/loss_scalar.png)
 
 *图 3 Loss 变化曲线*
+
 
 ---
 
