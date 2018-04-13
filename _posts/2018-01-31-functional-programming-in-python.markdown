@@ -4,7 +4,7 @@ title:      "Python 中的函数式编程"
 subtitle:   "Python 中一切好的特性都是从其他语言中借鉴来的"
 date:       2018-02-10 14:00 +0800
 author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: "img/post-bg-python.jpg"
 tags:
     - 开发
 ---

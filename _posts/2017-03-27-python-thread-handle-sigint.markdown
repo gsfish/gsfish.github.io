@@ -4,7 +4,7 @@ title:      "关于 Python 中主线程响应 SIGINT 解决方案"
 subtitle:   "由于主线程开小差而引发的一个问题"
 date:       2017-03-27 12:56 +0800
 author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: "img/post-bg-python.jpg"
 tags:
     - 开发
 ---

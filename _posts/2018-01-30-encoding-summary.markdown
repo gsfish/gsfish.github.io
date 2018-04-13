@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      "编码学习总结"
+title:      "字符编码学习总结"
 subtitle:   "Humans use text. Computers speak bytes."
 date:       2018-01-30 18:30 +0800
 author:     "gsfish"
