@@ -2,7 +2,7 @@
 layout:     post
 title:      "基于 CNN 的 Webshell 检测平台的设计与实现"
 subtitle:   "EagleEye/CNN"
-date:       2018-01-30 18:30 +0800
+date:       2017-11-18 18:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
 tags:
@@ -239,12 +239,6 @@ model.fit(x_train, y_train, n_epoch=10, shuffle=True, validation_set=0.1, batch_
 | 正常     | 38       | 299  |
 
 *表 2 检测结果的混淆矩阵*
-
-$$ precision = \frac{TP}{TP + FP} $$
-
-$$ recall = \frac{TP}{TP + FN} $$
-
-$$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 
 **Listing 15: Evalution metric**
 
