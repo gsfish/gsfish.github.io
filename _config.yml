@@ -46,8 +46,8 @@ disqus_username: gsfish
 # Baidu Analytics
 ba_track_id: 
 # Google Analytics
-ga_track_id: ''                         # Format: UA-xxxxxx-xx
-ga_domain: 
+ga_track_id: 'UA-119184436-1'           # Format: UA-xxxxxx-xx
+ga_domain: www.grassfish.net
 
 
 # Sidebar settings
