@@ -1,11 +1,11 @@
 # Site settings
-title: gsfish's Blog
+title: gsfish's blog
 SEOTitle: gsfish | cat /dev/random > blog
 header-img: img/home-bg.jpg
-email: caoyu97@hotmail.com
+email: tsaoyu97@gmail.com
 description: ""
 keyword: ""
-url: "https://gsfish.github.io"         # your host, for absolute URL
+url: "https://www.grassfish.net"         # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
