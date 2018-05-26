@@ -11,7 +11,7 @@ baseurl: ""                             # for example, '/blog' if your blog host
 
 # SNS settings
 RSS: true
-zhihu_username:  gsfish
+zhihu_username: gsfish
 github_username: gsfish
 
 
@@ -44,7 +44,7 @@ disqus_username: gsfish
 
 # Analytics settings
 # Baidu Analytics
-ba_track_id: 
+ba_track_id: c0b30f7e0bc35ff3e53763fc391005af
 # Google Analytics
 ga_track_id: 'UA-119184436-1'           # Format: UA-xxxxxx-xx
 ga_domain: www.grassfish.net
@@ -52,7 +52,7 @@ ga_domain: www.grassfish.net
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "日常写写代码，搞搞安全。"
+sidebar-about-description: "信安在读生，在路上。"
 sidebar-avatar: /img/avatar-gsfish.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
