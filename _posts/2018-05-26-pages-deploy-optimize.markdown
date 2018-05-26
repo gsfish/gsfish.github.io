@@ -22,7 +22,7 @@ DNS 解析设置如下：
 
 Github Pages 及 Coding Pages 的具体搭建过程此处略过，添加自定义域名并开启 HTTPS 即可。
 
-Git 远程仓库配置如下，此处添加了 all 远程仓库，并分别设置了 Github 和 Coding 的仓库地址。如此以来只用 `git push all master` 就能一次性同步更新两个仓库了：
+Git 远程仓库配置如下，此处添加了 all 远程仓库，并分别设置了 Github 和 Coding 的仓库地址。如此以来只用 `git push` 就能一次性同步更新两个仓库了：
 
 ```
 // 添加一个名为 all 的远程仓库，并设置仓库的原始 url
@@ -30,6 +30,7 @@ git remote add all git@github.com:gsfish/gsfish.github.io.git
 // 为 all 添加两个 pushurl
 git remote set-url --add --push all git@github.com:gsfish/gsfish.github.io.git
 git remote set-url --add --push all git@git.coding.net:gsfish/gsfish.coding.me.git
+// 将 git push 的上游设置为 all 的 master 分支
 ```
 
 使用之后发现了一个问题。以下为原本使用 Github Pages 时返回的相应，是一个 301 跳转，可直接跳转至博客页面：
