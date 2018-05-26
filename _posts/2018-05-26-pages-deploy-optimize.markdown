@@ -20,7 +20,9 @@ DNS 解析设置如下：
 
 ![01.png](/img/blog-deploy-optimize/01.png)
 
-Git 远程仓库配置如下，此处添加了 all 远程仓库，并分别设置了 Github 和 Coding 的仓库地址。如此以来只用 `push` 一次就能同步更新两个仓库了：
+Github Pages 及 Coding Pages 的具体搭建过程此处略过，添加自定义域名并开启 HTTPS 即可。
+
+Git 远程仓库配置如下，此处添加了 all 远程仓库，并分别设置了 Github 和 Coding 的仓库地址。如此以来只用 `git push all master` 就能一次性同步更新两个仓库了：
 
 ```
 // 添加一个名为 all 的远程仓库，并设置仓库的原始 url
@@ -76,7 +78,11 @@ date: Sat, 26 May 2018 08:54:27 GMT
 
 对于 301、302 跳转之间的区别可以参考[这篇博客](http://veryyoung.me/blog/2015/08/24/difference-between-301-and-302.html)，比较重要的一点是对于 301 跳转浏览器是可以缓存的。根据该 `location` 重定向的内容，Coding 会先放 5 秒钟的广告，然后才跳转到正常的博客页面。同时会设置一个 `splash=1` 的 Cookie 以记录当前用户的阅览状态。
 
-毕竟是免费的东西，而自己又懒得维护一个独立的服务器，只能说有点失望咯。下一步考虑只将百度的线路解析至 Coding 用于爬虫收录，默认线路还是解析至 Github Pages，同时使用 Cloudfare 作为 CDN。
+毕竟是免费的东西，而自己又懒得维护一个独立的服务器，只能说有点失望咯。下一步考虑只将百度的线路解析至 Coding 用于爬虫收录，默认线路还是解析至 Github Pages。
+
+## 晚饭后…
+
+于是乎，现已成功更改为上述方案。本来想把 DNS 服务器改为 Cloudfare 的，顺便使用 CDN，不过 Cloudfare 似乎并不支持国内外分线路解析（至少免费版如此），因此作罢。
 
 
 ---
