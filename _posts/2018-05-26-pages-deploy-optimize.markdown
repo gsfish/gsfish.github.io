@@ -18,7 +18,7 @@ Github 和 Coding 都可以使用 Let's Encrypt 提供的 SSL/TLS 证书自动�
 
 DNS 解析设置如下：
 
-![01.png](../img/blog-deploy-optimize/01.png)
+![01.png](/img/blog-deploy-optimize/01.png)
 
 Git 远程仓库配置如下，要 Push 两次的操作感觉不太优雅，可以考虑使用 Git Hook：
 
