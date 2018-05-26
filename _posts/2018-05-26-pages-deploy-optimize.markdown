@@ -20,11 +20,14 @@ DNS 解析设置如下：
 
 ![01.png](/img/blog-deploy-optimize/01.png)
 
-Git 远程仓库配置如下，要 Push 两次的操作感觉不太优雅，可以考虑使用 Git Hook：
+Git 远程仓库配置如下，此处添加了 all 远程仓库，并分别设置了 Github 和 Coding 的仓库地址。如此以来只用 `push` 一次就能同步更新两个仓库了：
 
 ```
-git remote add origin git@github.com:gsfish/gsfish.github.io.git
-git remote add mirror git@git.coding.net:gsfish/gsfish.coding.me.git
+// 添加一个名为 all 的远程仓库，并设置仓库的原始 url
+git remote add all git@github.com:gsfish/gsfish.github.io.git
+// 为 all 添加两个 pushurl
+git remote set-url --add --push all git@github.com:gsfish/gsfish.github.io.git
+git remote set-url --add --push all git@git.coding.net:gsfish/gsfish.coding.me.git
 ```
 
 使用之后发现了一个问题。以下为原本使用 Github Pages 时返回的相应，是一个 301 跳转，可直接跳转至博客页面：
@@ -79,5 +82,5 @@ date: Sat, 26 May 2018 08:54:27 GMT
 ---
 
 > 参考资料：  
-> [Coding.net上建立镜像解决Github Pages博客百度无法收录问题](http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/)
-> [8.3 自定义 Git - Git 钩子](https://git-scm.com/book/zh/v2/%E8%87%AA%E5%AE%9A%E4%B9%89-Git-Git-%E9%92%A9%E5%AD%90)
+> [Coding.net上建立镜像解决Github Pages博客百度无法收录问题](http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/)  
+> [Git - Pushing code to two remotes - Stack Overflow](https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes)  
