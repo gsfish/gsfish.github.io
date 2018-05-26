@@ -31,6 +31,7 @@ git remote add all git@github.com:gsfish/gsfish.github.io.git
 git remote set-url --add --push all git@github.com:gsfish/gsfish.github.io.git
 git remote set-url --add --push all git@git.coding.net:gsfish/gsfish.coding.me.git
 // 将 git push 的上游设置为 all 的 master 分支
+git push -u all master
 ```
 
 使用之后发现了一个问题。以下为原本使用 Github Pages 时返回的相应，是一个 301 跳转，可直接跳转至博客页面：
@@ -83,7 +84,7 @@ date: Sat, 26 May 2018 08:54:27 GMT
 
 ## 晚饭后…
 
-于是乎，现已成功更改为上述方案。本来想把 DNS 服务器改为 Cloudfare 的，顺便使用 CDN，不过 Cloudfare 似乎并不支持国内外分线路解析（至少免费版如此），因此作罢。
+于是乎，现已成功更改为上述方案。本来想把 DNS 服务器改为 Cloudfare 的，顺便使用 CDN，不过 Cloudfare 的免费版并不支持国内外分线路解析（需要 Enterprise），因此作罢。
 
 
 ---
