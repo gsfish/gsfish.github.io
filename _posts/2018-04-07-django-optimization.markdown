@@ -9,6 +9,7 @@ tags:
     - 开发
 ---
 
+
 ## 运行环境
 
 | 运行环境 | 环境配置                                    |
@@ -181,9 +182,7 @@ Percentage of the requests served within a certain time (ms)
 // TODO
 
 
----
-
-> 参考资料：  
-> [Django运行方式及处理流程总结](http://python.jobbole.com/80836/)  
-> [Django源码分析2:本地运行runserver分析](https://blog.csdn.net/qq_33339479/article/details/78873786)  
-> [Django 性能优化官方文档笔记(主要针对ORM)](https://changchen.me/blog/20170503/django-performance-and-optimisation/)  
+## 参考资料
+* [Django运行方式及处理流程总结](http://python.jobbole.com/80836/)
+* [Django源码分析2:本地运行runserver分析](https://blog.csdn.net/qq_33339479/article/details/78873786)
+* [Django 性能优化官方文档笔记(主要针对ORM)](https://changchen.me/blog/20170503/django-performance-and-optimisation/)

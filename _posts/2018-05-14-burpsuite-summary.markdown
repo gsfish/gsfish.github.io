@@ -9,6 +9,7 @@ tags:
     - 渗透
 ---
 
+
 最近在重新学习使用 Burp Suite，此物确实乃 Web 安全测试的一大利器。总结了一些较有用设置选项，可用于 SSL 抓包等。
 
 ## Burp Suite 工作流程
@@ -175,8 +176,7 @@ Intruder 在原始请求数据的基础上，通过修改各种请求参数，�
 更多的设置选项在 [这篇文档](https://www.gitbook.com/book/t0data/burpsuite) 中有很详细的记载。不过部分内容感觉是机翻的，阅读起来有些问题，还是建议参考官方文档。
 
 
----
+## 参考资料
 
-> 参考资料：  
-> [Burp Suite 实战指南](https://www.gitbook.com/book/t0data/burpsuite)  
-> [Burp Suite Documentation - Contents](https://portswigger.net/burp/help/contents)  
+* [Burp Suite 实战指南](https://www.gitbook.com/book/t0data/burpsuite)
+* [Burp Suite Documentation - Contents](https://portswigger.net/burp/help/contents)

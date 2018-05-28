@@ -9,6 +9,7 @@ tags:
     - 开发
 ---
 
+
 从设计上看，不管函数式语言的定义如何，Python 都不是一门函数式语言。Python 只是从函数式语言中借鉴了一些好的想法。
 
 以下为 Python 中涉及函数式编程的主要工具：
@@ -96,10 +97,9 @@ Guido 在[一篇博客](https://neopythonic.blogspot.com/2009/04/tail-recursion-
 博客中还对一些现有的比较 Hack 的 TRE 优化方式进行了分析与反驳，十分有趣。
 
 
----
+## 参考资料
 
-> 参考资料：  
-> [尾调用优化 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/04/tail-call.html)  
-> [The History of Python: Origins of Python's "Functional" Features](https://python-history.blogspot.com/2009/04/origins-of-pythons-functional-features.html)  
-> [Neopythonic: Tail Recursion Elimination](https://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html)  
-> [《流畅的 Python》-- Luciano Ramalho](https://www.amazon.cn/dp/B072HMKKPG)  
+* [尾调用优化 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/04/tail-call.html)
+* [The History of Python: Origins of Python's "Functional" Features](https://python-history.blogspot.com/2009/04/origins-of-pythons-functional-features.html)
+* [Neopythonic: Tail Recursion Elimination](https://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html)
+* [《流畅的 Python》-- Luciano Ramalho](https://www.amazon.cn/dp/B072HMKKPG)

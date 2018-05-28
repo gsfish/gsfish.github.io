@@ -10,20 +10,21 @@ tags:
     - 内网
 ---
 
-> 大部分内容都是参考的网上的教程，但还是想照着试试并记录一下
 
-#### 基本环境：
+**基本环境**
 
-> 网关：  
-> 192.168.1.1  
->   
-> 攻击者：  
-> IP: 192.168.1.110  
-> OS: Kali Linux (VirtualBox)  
->   
-> 靶机：  
-> IP: 192.168.1.105  
-> OS: Windows 10  
+```
+网关：  
+192.168.1.1  
+ 
+攻击者：  
+IP: 192.168.1.110  
+OS: Kali Linux (VirtualBox)  
+
+靶机：  
+IP: 192.168.1.105  
+OS: Windows 10  
+```
 
 ---
 
@@ -152,7 +153,7 @@ hamster 是一个十分高效的工具，直接输入命令即可打开。虽然
 
 [An ARP Attack](https://yungkcx.github.io/network/security/2016/06/10/An-ARP-Attack.html)
 
----
 
-> 参考资料：  
-> [『局域网安全』利用ARP欺骗劫持Cookie](http://www.cnblogs.com/anka9080/p/arpspoof.html)
+## 参考资料
+
+* [『局域网安全』利用ARP欺骗劫持Cookie](http://www.cnblogs.com/anka9080/p/arpspoof.html)

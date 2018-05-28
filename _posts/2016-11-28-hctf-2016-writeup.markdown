@@ -9,7 +9,6 @@ tags:
     - CTF
 ---
 
-> 纪念第一次打 CTF，虽然只解出来 4 题 Orz
 
 # Level-1
 

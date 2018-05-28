@@ -9,6 +9,7 @@ tags:
     - 开发
 ---
 
+
 # 事出有因
 
 最近在 Freebuf 上的[一篇文章](http://www.freebuf.com/sectool/129224.html)的启发下用多线程改写了一个基于 Python 的 Struts2 S2-045 [批量检测工具](https://github.com/gsfish/S2-Reaper)，使用的是 `threading` 模块。`thread` 和 `threading` 都允许程序员创建和管理线程，而 `threading` 对原生的 `thread` 做了进一步的封装，提供了更高级别，更强的线程管理的功能。
@@ -147,9 +148,9 @@ if __name__ == '__main__':
 
 最后一想，其实貌似没必要这么麻烦。于是把 PoC 和 Exploit 设置为守护线程，并直接将爬虫作为主线程了……
 
----
 
-> 参考资料：  
-> [Python中用Ctrl+C终止多线程程序的问题解决](http://www.jb51.net/article/35165.htm)  
-> [python多线程ctrl-c退出问题](http://blog.csdn.net/ace_fei/article/details/8899333)  
-> [Python 多线程响应 ctrl+c 优雅退出的方式](https://www.v2ex.com/t/323676)
+# 参考资料
+
+* [Python中用Ctrl+C终止多线程程序的问题解决](http://www.jb51.net/article/35165.htm)
+* [python多线程ctrl-c退出问题](http://blog.csdn.net/ace_fei/article/details/8899333)
+* [Python 多线程响应 ctrl+c 优雅退出的方式](https://www.v2ex.com/t/323676)

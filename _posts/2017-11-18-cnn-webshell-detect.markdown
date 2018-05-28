@@ -9,6 +9,7 @@ tags:
     - 开发
 ---
 
+
 ## 1 相关理论
 
 ### 1.1 卷积神经网络与特征提取
@@ -263,11 +264,10 @@ $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 *图 3 Loss 变化曲线*
 
 
----
+## 参考资料
 
-> 参考资料：  
-> [基于机器学习的 Webshell 发现技术探索](https://segmentfault.com/a/1190000011112448)  
-> [基于 word embedding 和 CNN 的情感分类模型](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=)  
-> [TIPI：深入理解 PHP 内核](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)  
-> [听说你了解深度学习最常用的学习算法：Adam 优化算法？](https://www.jiqizhixin.com/articles/2017-07-12)  
-> [Dropout: A Simple Way to Prevent Neural Networks from Overfitting. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever & R. Salakhutdinov, (2014), Journal of Machine Learning Research, 5(Jun)(2), 1929-1958.](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)  
+* [基于机器学习的 Webshell 发现技术探索](https://segmentfault.com/a/1190000011112448)
+* [基于 word embedding 和 CNN 的情感分类模型](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=)
+* [TIPI：深入理解 PHP 内核](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
+* [听说你了解深度学习最常用的学习算法：Adam 优化算法？](https://www.jiqizhixin.com/articles/2017-07-12)
+* [Dropout: A Simple Way to Prevent Neural Networks from Overfitting. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever & R. Salakhutdinov, (2014), Journal of Machine Learning Research, 5(Jun)(2), 1929-1958.](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)

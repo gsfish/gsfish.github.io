@@ -9,6 +9,7 @@ tags:
     - 开发
 ---
 
+
 有几个概念容易混淆：
 
 * `Unicode`：指的是字符集。其为每一个文字符号分配了唯一的标识
@@ -156,13 +157,13 @@ int MessageBoxW(HWND hWnd, const wchar_t* lpText, const wchar_t* lpCaption, unsi
 #endif
 ```
 
----
 
-> 参考资料：  
-> [Unicode - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-hans/Unicode)  
-> [UTF-8 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/UTF-8)  
-> [UTF-16 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/UTF-16)  
-> [字节顺序标记 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F)  
-> [《流畅的 Python》](https://www.amazon.cn/dp/B072HMKKPG)  
-> [unicode - Difference between MBCS and UTF-8 on Windows - Stack Overflow](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)  
-> [windows - Why isn't UTF-8 allowed as the "ANSI" code page? - Stack Overflow](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)  
+# 参考资料
+
+* [Unicode - 维基百科，自由的百科全书](https://zh.wikipedia.org/zh-hans/Unicode)
+* [UTF-8 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/UTF-8)
+* [UTF-16 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/UTF-16)
+* [字节顺序标记 - 维基百科，自由的百科全书](https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F)
+* [《流畅的 Python》](https://www.amazon.cn/dp/B072HMKKPG)
+* [unicode - Difference between MBCS and UTF-8 on Windows - Stack Overflow](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)
+* [windows - Why isn't UTF-8 allowed as the "ANSI" code page? - Stack Overflow](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)

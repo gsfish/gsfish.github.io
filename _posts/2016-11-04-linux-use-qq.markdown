@@ -10,7 +10,6 @@ tags:
     - 不务正业
 ---
 
-> Windows 有的 Linux 也有，而 Linux 有的 Windows 未必有
 
 ## 前言
 
