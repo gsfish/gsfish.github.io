@@ -6,11 +6,12 @@ date:       2017-03-27 12:56 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
 tags:
-    - 开发
+    - 并发
+    - Python
 ---
 
 
-# 事出有因
+# 0x00 引子
 
 最近在 Freebuf 上的[一篇文章](http://www.freebuf.com/sectool/129224.html)的启发下用多线程改写了一个基于 Python 的 Struts2 S2-045 [批量检测工具](https://github.com/gsfish/S2-Reaper)，使用的是 `threading` 模块。`thread` 和 `threading` 都允许程序员创建和管理线程，而 `threading` 对原生的 `thread` 做了进一步的封装，提供了更高级别，更强的线程管理的功能。
 
@@ -19,14 +20,15 @@ tags:
 * 线程 1 为 Google 爬虫，将抓取以关键词搜索到的有关 URL。
 * 线程 2 为 PoC 检测，会将具有漏洞的 URL 进一步筛选并执行 Exploit。
 
-然而在实现的过程中遇到了一个问题，觉得挺有意思的。
+然而在实现的过程中遇到了一个问题，觉得挺有意思的：
 
 1. 若将子线程设置为守护线程，则主线程在创建完两个子线程后，由于执行完毕将会退出。
 2. 若子线程非守护线程，则主线程在执行完后将会阻塞，直到子线程执行结束。
 
 问题在于，在运行了一段时间后想要退出，当按下 `Control + C` 时由于主线程被子线程阻塞了，因此无法响应终端发出的 SIGINT 信号，所以只好简单粗暴地将整个进程 `kill` 掉。后来在网上收集了一些类似问题的解决方案。
 
-## 方案一
+
+## 0x01 方案一
 
 只有把子线程设成守护线程才能让主线程不等待，以接收 SIGINT 信号，但是又不能让子线程立即结束。因此可以采用轮询的方式在主线程中不断检查子线程是否结束，并使用 `sleep()` 节省 CPU 资源。此方案效率较低，且会产生延迟。
 
@@ -41,7 +43,8 @@ while True:
         break
 ```
 
-## 方案二
+
+## 0x02 方案二
 
 创建一个新进程来接收 SIGINT 并将执行任务的进程杀掉。其中 `Watch()` 需要在子线程创建前调用。
 
@@ -89,7 +92,8 @@ class Watcher:
         except OSError: pass
 ```
 
-## 方案三
+
+## 0x03 方案三
 
 设置全局变量标记子线程是否继续，并在主线程阻塞前处理 `KeyboardInterrupt` 异常。有关代码如下：
 
@@ -144,13 +148,14 @@ if __name__ == '__main__':
     print('共计用时{}秒'.format(time.time() - start_time))
 ```
 
-## 最终方案
 
-最后一想，其实貌似没必要这么麻烦。于是把 PoC 和 Exploit 设置为守护线程，并直接将爬虫作为主线程了……
+## 0x04 最终方案
+
+最后一想，其实貌似没必要这么麻烦。于是把 PoC 和 Exploit 设置为守护线程，并直接将爬虫作为主线程。
 
 
-# 参考资料
+# 参考文献
 
-* [Python中用Ctrl+C终止多线程程序的问题解决](http://www.jb51.net/article/35165.htm)
-* [python多线程ctrl-c退出问题](http://blog.csdn.net/ace_fei/article/details/8899333)
-* [Python 多线程响应 ctrl+c 优雅退出的方式](https://www.v2ex.com/t/323676)
+1. [Python中用Ctrl+C终止多线程程序的问题解决[EB/OL]. http://www.jb51.net/article/35165.htm](http://www.jb51.net/article/35165.htm)
+2. [ace_fei. python多线程ctrl-c退出问题[EB/OL]. http://blog.csdn.net/ace_fei/article/details/8899333](http://blog.csdn.net/ace_fei/article/details/8899333)
+3. [cdwyd. Python 多线程响应 ctrl+c 优雅退出的方式[EB/OL]. https://www.v2ex.com/t/323676](https://www.v2ex.com/t/323676)

@@ -6,13 +6,13 @@ date:       2017-11-18 18:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
 tags:
-    - 开发
+    - 机器学习
 ---
 
 
-## 1 相关理论
+# 1 相关理论
 
-### 1.1 卷积神经网络与特征提取
+## 1.1 卷积神经网络与特征提取
 
 卷积神经网络中的卷积层能够很好地描述数据的局部特征，通过池化层可以进一步提取出局部特征中最具有代表性的部分。
 
@@ -22,7 +22,7 @@ tags:
 
 基于以上分析，本文尝试引入卷积神经网络模型来解决恶意脚本检测的问题。
 
-### 1.2 Opcode 调用序列
+## 1.2 Opcode 调用序列
 
 Opcode 是计算机指令中的一部分，用于指定要执行的操作，指令的格式和规范由处理器的指令规范指定。除了指令本身以外通常还有指令所需要的操作数，可能有的指令不需要显式的操作数。这些操作数可能是寄存器中的值，堆栈中的值，某块内存的值或者 IO 端口中的值等等。通常 Opcode 还有另一种称谓：字节码（Byte-code）。
 
@@ -49,7 +49,8 @@ RETURN                               1
 ```
 *代码 2：VLD 对于该木马的输出结果*
 
-## 2 基于 Opcodes 序列和 CNN 的 PHP 代码分类模型
+
+# 2 基于 Opcodes 序列和 CNN 的 PHP 代码分类模型
 
 本平台对外提供 RESTful API 以接收待检测的目标文件。若当前已存在训练好的检测模型，则加载该模型，否则根据已有的所有训练样本重新训练新的模型。模型加载完成后，将对得到的目标文件进行预处理。预处理的过程由 preprocess() 函数负责，平台整体的检测流程如下：
 
@@ -69,7 +70,7 @@ END
 ```
 *代码 3: Webshell 检测平台检测流程的伪代码*
 
-### 2.1 模型的输入处理
+## 2.1 模型的输入处理
 
 ```
 BEGIN
@@ -96,7 +97,7 @@ cmd = ('{0} -dvld.active=1 -dvld.execute=0'.format(php_path)).split()
 cmd.append(filename)
 p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 ```
-**Listing 5: Call to VLD extension**
+*代码 5: 调用 VLD 扩展*
 
 上述 1.2 节中的 PHP 后门所对应的 Opcodes 序列如下：
 
@@ -116,14 +117,14 @@ for index, code in enumerate(codes_seq):
         continue
     codes_seq[index] = code_record.index(code) + 1
 ```
-**Listing 7: Serializing for opcode symbols**
+*代码 6: Opcodes 序列化过程*
 
 由于所采用的卷积层接受输入的维度需保持一致，假设已知 Opcodes 序列的最大长度为 m，当前待处理的序列长度为 l，则在当前序列尾部填充 m - l 个 0。
 
 ```python
 max_length = len(reduce(lambda x, y: x if len(x) > len(y) else y, codes_seqs))
  ```
- **Listing 8: Find the max length of opcode sequences**
+*代码 7: 寻找最大的序列长度*
 
 最后对测试样本所属的标签进行二类化转换：
 
@@ -139,9 +140,9 @@ def to_categorical(y):
     Y[np.arange(len(y)), y] = 1.
     return Y
 ```
-**Listing 13: The to_categorical() function**
+*代码 8: to_categorical() 函数*
 
-### 2.2 模型的具体结构
+## 2.2 模型的具体结构
 
 本文所采用的卷积神经网络的具体结构如图所示。
 
@@ -159,7 +160,7 @@ $$ f(x) = max(0, x) $$
 
 $$ softmax(x)_i = \frac{exp(x_i)}{\sum_j{exp(x_j)}} $$
 
-### 2.3 模型的训练
+## 2.3 模型的训练
 
 本文采用基于多类的交叉熵函数作为损失函数：
 
@@ -167,9 +168,9 @@ $$ H(p, q) = -\sum_x p(x) \log q(x) $$
 
 使用 Adam 优化算法，以 0.001 的学习速率最小化交叉熵。Adam 算法和传统的随机梯度下降不同。随机梯度下降保持单一的学习率更新所有的权重，学习率在训练过程中并不会改变。而 Adam 通过计算梯度的一阶矩估计和二阶矩估计而为不同的参数设计独立的自适应性学习率。
 
-## 3 模型训练与评估
+# 3 模型训练与评估
 
-### 3.1 运行环境
+## 3.1 运行环境
 
 本文中的所有模型测试均在如表 1 所示的运行环境中完成。
 
@@ -182,9 +183,9 @@ $$ H(p, q) = -\sum_x p(x) \log q(x) $$
 | 编程语言     | Python 3.5                              |
 | 深度学习框架 | tensorflow 1.4.0                        |
 
-*表 1 运行环境及配置*
+*表 1：运行环境及配置*
 
-### 3.2 数据集的选择与处理
+## 3.2 数据集的选择与处理
 
 实验数据来自于 Github 上部分知名开源 PHP 项目和 Webshell 收集项目。该数据集中总共包含 2648 个样本，其中白样本 1394 个，恶意样本 1254 个。使用留出法对上述两种样本按照 4:1 的比例进行划分，并对样本顺序进行随机调整以减小其对训练结果的干扰，用以对模型预测的准确率与召回率进行评估。划分后的训练集与测试集中的样本数量分别为 1986 与 662。
 
@@ -198,7 +199,7 @@ c) 填充 Opcodes 序列。由于所采用的卷积层接受输入的维度需�
 
 d) 二类化样本标签。所使用模型中全连接层的输出维度为二维，因此需要对测试样本的标签进行相应的转换。
 
-### 3.3 模型训练
+## 3.3 模型训练
 
 采用 Tensorflow 作为深度学习引擎的后端，使用 tflearn 框架进行神经网络的构建。模型测试仅对模型进行 10 轮迭代训练。其中关键代码如下：
 
@@ -231,7 +232,7 @@ model = tflearn.DNN(network)
 model.fit(x_train, y_train, n_epoch=10, shuffle=True, validation_set=0.1, batch_size=100)
 ```
 
-### 3.3 检测结果
+## 3.3 检测结果
 
 |          | 预测结果 |      |
 | -------- | -------- | ---- |
@@ -241,8 +242,6 @@ model.fit(x_train, y_train, n_epoch=10, shuffle=True, validation_set=0.1, batch_
 
 *表 2 检测结果的混淆矩阵*
 
-**Listing 15: Evalution metric**
-
 准确率约：0.8872，召回率约：0.9645，F-score：0.9243。
 
 $$ precision = \frac{TP}{TP + FP} $$
@@ -251,7 +250,7 @@ $$ recall = \frac{TP}{TP + FN} $$
 
 $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 
-**Listing 15: Evalution metric**
+*公式 1: 评估指标*
 
 通过 TensorBoard 得到了模型训练过程中 Accuracy 以及 Loss（交叉熵）的变化情况：
 
@@ -264,10 +263,10 @@ $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 *图 3 Loss 变化曲线*
 
 
-## 参考资料
+# 参考文献
 
-* [基于机器学习的 Webshell 发现技术探索](https://segmentfault.com/a/1190000011112448)
-* [基于 word embedding 和 CNN 的情感分类模型](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=)
-* [TIPI：深入理解 PHP 内核](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
-* [听说你了解深度学习最常用的学习算法：Adam 优化算法？](https://www.jiqizhixin.com/articles/2017-07-12)
+* [兜哥. 基于机器学习的 Webshell 发现技术探索[EB/OL]. https://segmentfault.com/a/1190000011112448](https://segmentfault.com/a/1190000011112448)
+* [蔡慧苹,王丽丹,段书凯.基于word embedding和CNN的情感分类模型[J].计算机应用研究,2016,33(10):2902-2905+2909.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=)
+* [TIPI. 深入理解 PHP 内核[EB/OL]. http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
+* [思源. 听说你了解深度学习最常用的学习算法：Adam 优化算法？[EB/OL]. https://www.jiqizhixin.com/articles/2017-07-12](https://www.jiqizhixin.com/articles/2017-07-12)
 * [Dropout: A Simple Way to Prevent Neural Networks from Overfitting. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever & R. Salakhutdinov, (2014), Journal of Machine Learning Research, 5(Jun)(2), 1929-1958.](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)

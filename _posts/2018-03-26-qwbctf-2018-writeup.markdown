@@ -10,9 +10,9 @@ tags:
 ---
 
 
-# Reverse
+# 0x00 Reverse
 
-## 0x00 simplecheck
+## simplecheck
 
 下载下来发现是个 zip 文件，打开后发现是 apk，用 jeb 载入并反编译
 
@@ -26,40 +26,43 @@ tags:
 
 ![03.png](/img/qwbctf-2018-writeup/03.png)
 
+---
 
-# Crypto
+# 0x01 Crypto
 
-## 0x01 streamgame1
+## streamgame1
 
 根据 `R=int(flag[5:-1],2)` 以及 `len(flag)==25` 推测 flag 为 19 个二进制位，暴力解出 flag 即可
 
 ![04.png](/img/qwbctf-2018-writeup/04.png)
 
-## 0x02 streamgame2
+## streamgame2
 
 和上题一样，根据 `R=int(flag[5:-1],2)` 以及 `len(flag)==27` 推测 flag 为 21 个二进制位，暴力解出 flag 即可
 
 ![05.png](/img/qwbctf-2018-writeup/05.png)
 
-## 0x03 streamgame4
+## streamgame4
 
 和上题一样，根据 `R=int(flag[5:-1],2)` 以及 `len(flag)==27` 推测 `flag` 为 21 个二进制位，这里只验证 key 前 16 个字节，暴力解出 flag 即可
 
 ![06.png](/img/qwbctf-2018-writeup/06.png)
 
+---
 
-# Misc
+# 0x02 Misc
 
-## 0x04 welcome
+## welcome
 
 下载下来发现是 dib 文件，用 16 进制编辑器打开，发现前 2 个字节是 `BM` 重命名为 bmp 后用 StegSolve 打开。用 Stereogram Solver 偏移量 `offset` 为 80 后发现 flag
 
 ![07.png](/img/qwbctf-2018-writeup/07.png)
 
+---
 
-# Web
+# 0x03 Web
 
-## 0x05 Web 签到
+## Web 签到
 
 第一关网页源码的提示人如下。可用 PHP 弱类型过掉，`param1=QNKCDZO`、`param2=s878926199a`：
 

@@ -6,15 +6,18 @@ date:       2018-05-14 15:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-hacker.jpg"
 tags:
+    - BurpSuite
     - 渗透
 ---
 
 
 最近在重新学习使用 Burp Suite，此物确实乃 Web 安全测试的一大利器。总结了一些较有用设置选项，可用于 SSL 抓包等。
 
-## Burp Suite 工作流程
+# 0x00 Burp Suite 工作流程
 
 ![01.png](/img/burpsuite-summary/01.png)
+
+# 0x01 设置选项
 
 ## Proxy
 
@@ -22,11 +25,11 @@ tags:
 
 ### Proxy Listeners
 
-#### Binding
+#### 1 Binding
 
 IP 和端口绑定设置，绑定 IP 地址分仅本地回路、所有接口、指定地址三种模式。
 
-#### Request handling
+#### 2 Request handling
 
 ![02.png](/img/burpsuite-summary/02.png)
 
@@ -46,7 +49,7 @@ IP 和端口绑定设置，绑定 IP 地址分仅本地回路、所有接口、�
 
 对于 SSL 流量，若客户端会对服务端进行验证，则会使用该 hostname 生成证书；若不进行认证，则使用自签名证书。若设置了 `Redict to host`，则可在该 `Listener` 设置对应 hostname 的 CA-signed 证书；若代理的请求中含有多个目标域名，则可设置多个虚拟网卡与 `Listener` 并分别生成证书。
 
-#### Certificate
+#### 3 Certificate
 
 ![03.png](/img/burpsuite-summary/03.png)
 
@@ -65,7 +68,7 @@ CA 的根证书、使用 `openssl` 生成的证书为自签名证书，客户端
 
 官网有使用 `openssl` 生成该证书教程 [Creating a Custom CA Certificate](https://portswigger.net/burp/help/proxy_options#listeners_creatingcert)
 
-#### SSL Pass Through
+#### 4 SSL Pass Through
 
 对于列表中所设置的 `域名` / `IP` / `端口` 范围内的 SSL 流量不进行拦截。适用于 SSL 报错影响正常连接、无法消除的场景，例如移动端 APP 产生的请求。
 
@@ -79,7 +82,7 @@ Intruder 在原始请求数据的基础上，通过修改各种请求参数，�
 
 ### Positions
 
-#### Attack type
+#### 1 Attack type
 
 `Sniper`：
 
@@ -99,7 +102,7 @@ Intruder 在原始请求数据的基础上，通过修改各种请求参数，�
 
 ### Payloads
 
-#### Payloads type
+#### 1 Payloads type
 
 ![04.png](/img/burpsuite-summary/04.png)
 
@@ -176,7 +179,7 @@ Intruder 在原始请求数据的基础上，通过修改各种请求参数，�
 更多的设置选项在 [这篇文档](https://www.gitbook.com/book/t0data/burpsuite) 中有很详细的记载。不过部分内容感觉是机翻的，阅读起来有些问题，还是建议参考官方文档。
 
 
-## 参考资料
+# 参考文献
 
-* [Burp Suite 实战指南](https://www.gitbook.com/book/t0data/burpsuite)
-* [Burp Suite Documentation - Contents](https://portswigger.net/burp/help/contents)
+1. [t0data. Burp Suite 实战指南[EB/OL]. https://www.gitbook.com/book/t0data/burpsuite](https://www.gitbook.com/book/t0data/burpsuite)
+2. [Burp Suite Documentation[EB/OL]. https://portswigger.net/burp/help/contents](https://portswigger.net/burp/help/contents)

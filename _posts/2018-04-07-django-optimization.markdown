@@ -6,11 +6,12 @@ date:       2018-04-07 21:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
 tags:
-    - 开发
+    - Django
+    - Python
 ---
 
 
-## 运行环境
+# 0x00 运行环境
 
 | 运行环境 | 环境配置                                    |
 | -------- | ------------------------------------------- |
@@ -21,21 +22,22 @@ tags:
 | 后台框架 | Django 2.0.2                                |
 | 压测工具 | ApacheBench 2.3                             |
 
-## 1 并发访问
 
-### 1.1 runserver
+# 0x01 并发访问
+
+## runserver
 
 由于 Django 并没有提供高性能的 server 端来处理连接，所以一般不建议使用该命令在生产环境中部署。
 
-### 1.2 Gunicorn
+## Gunicorn
 
 Django 在[官方文档](http://docs.gunicorn.org/en/latest/design.html#how-many-workers)中提到过 Worker 数的一个推荐设置 `(2 x $num_cores) + 1`。因此采用了以下方案，使用 Nginx 反向代理（项目的 Web API 仍会用到一些静态资源），Django 负责实现 WSGI，并由 Gunicorn pre-fork 出 5 个 Worker，每个 Worker 通过 gevent 异步处理事务：
 
 nginx + gunicorn (gevent, 5 worker)
 
-### 1.3 压力测试
+## 压力测试
 
-#### ApacheBench
+ApacheBench：
 
 ab 命令会创建很多的并发访问线程，模拟多个访问者同时对某一 URL 地址进行访问。它的测试目标是基于 URL 的，因此，既可以用来测试 Apache 的负载压力，也可以测试 nginx、lighthttp、tomcat、IIS 等其它 Web Server的压力。
 
@@ -47,7 +49,7 @@ ab 命令对发出负载的计算机要求很低，既不会占用很高 CPU，�
 ab -t 60 -c 100 -p params.txt -m post -T application/x-www-form-urlencoded -v 1 http://127.0.0.1:8000/api/v1/dashboard/
 ```
 
-#### runserver
+使用 runserver：
 
 ```
 Server Software:        WSGIServer/0.2
@@ -105,7 +107,7 @@ Percentage of the requests served within a certain time (ms)
  100%  36210 (longest request)
 ```
 
-#### Gunicorn
+使用 Gunicorn：
 
 ```
 Server Software:        nginx/1.10.3
@@ -163,26 +165,29 @@ Percentage of the requests served within a certain time (ms)
  100%     11 (longest request)
 ```
 
-#### 小结
+## 小结
 
 根据 `Requests per second` 可以见得，使用 Gunicorn (22532.28) 后在每秒的事务处理量上是默认 runserver (17.83) 的约 1264 倍。
 
-## 2 查询优化
 
-// TODO
-
-## 3 进一步优化
-
-### 3.1 使用 Redis 进行缓存
-
-// TODO
-
-### 3.2 使用异步 Worker 进行写库操作
+# 0x02 查询优化
 
 // TODO
 
 
-## 参考资料
-* [Django运行方式及处理流程总结](http://python.jobbole.com/80836/)
-* [Django源码分析2:本地运行runserver分析](https://blog.csdn.net/qq_33339479/article/details/78873786)
-* [Django 性能优化官方文档笔记(主要针对ORM)](https://changchen.me/blog/20170503/django-performance-and-optimisation/)
+# 0x03 进一步优化
+
+## 使用 Redis 进行缓存
+
+// TODO
+
+## 使用异步 Worker 进行写库操作
+
+// TODO
+
+
+# 参考文献
+
+1. [xianglong. Django运行方式及处理流程总结[EB/OL]. http://python.jobbole.com/80836/](http://python.jobbole.com/80836/)
+2. [小屋子大侠. Django源码分析2:本地运行runserver分析[EB/OL]. https://blog.csdn.net/qq_33339479/article/details/78873786](https://blog.csdn.net/qq_33339479/article/details/78873786)
+3. [Henry Z. Django 性能优化官方文档笔记(主要针对ORM)[EB/OL]. https://changchen.me/blog/20170503/django-performance-and-optimisation/](https://changchen.me/blog/20170503/django-performance-and-optimisation/)

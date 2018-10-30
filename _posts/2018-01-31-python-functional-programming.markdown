@@ -6,7 +6,8 @@ date:       2018-02-10 14:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
 tags:
-    - 开发
+    - 编程
+    - Python
 ---
 
 
@@ -97,9 +98,9 @@ Guido 在[一篇博客](https://neopythonic.blogspot.com/2009/04/tail-recursion-
 博客中还对一些现有的比较 Hack 的 TRE 优化方式进行了分析与反驳，十分有趣。
 
 
-## 参考资料
+# 参考文献
 
-* [尾调用优化 - 阮一峰的网络日志](http://www.ruanyifeng.com/blog/2015/04/tail-call.html)
-* [The History of Python: Origins of Python's "Functional" Features](https://python-history.blogspot.com/2009/04/origins-of-pythons-functional-features.html)
-* [Neopythonic: Tail Recursion Elimination](https://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html)
-* [《流畅的 Python》-- Luciano Ramalho](https://www.amazon.cn/dp/B072HMKKPG)
+1. [阮一峰. 尾调用优化[EB/OL]. http://www.ruanyifeng.com/blog/2015/04/tail-call.html](http://www.ruanyifeng.com/blog/2015/04/tail-call.html)
+2. [Guido van Rossum. The History of Python: Origins of Python's "Functional" Features[EB/OL]. https://python-history.blogspot.com/2009/04/origins-of-pythons-functional-features.html](https://python-history.blogspot.com/2009/04/origins-of-pythons-functional-features.html)
+3. [Guido van Rossum. Neopythonic: Tail Recursion Elimination[EB/OL]. https://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html](https://neopythonic.blogspot.com/2009/04/tail-recursion-elimination.html)
+4. [Luciano Ramalho. 流畅的Python[M]. 北京: 人民邮电出版社, 2017](https://www.amazon.cn/dp/B072HMKKPG](https://www.amazon.cn/dp/B072HMKKPG)
