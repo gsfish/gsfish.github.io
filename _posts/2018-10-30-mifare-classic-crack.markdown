@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "智能卡安全之 M1 卡的破解"
-subtitle:   ""
+title:      "智能卡安全之 M1 卡破解"
+subtitle:   "入门篇，据说想出系列"
 date:       2018-10-30 21:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-06.jpg"
@@ -10,7 +10,7 @@ tags:
 ---
 
 
-之所以起这个标题，是想有朝一日可以写成一个系列。由于目前手里只有一张未加密的 M1（MIFARE Classic 1K）卡，因此本文仅包含对 M1 卡的破解。
+> 之所以起这个标题，是想有朝一日可以写成一个系列。由于目前手里只有一张未加密的 M1（MIFARE Classic 1K）卡，因此本文仅包含对 M1 卡的破解。
 
 
 # 0x00 智能卡概况

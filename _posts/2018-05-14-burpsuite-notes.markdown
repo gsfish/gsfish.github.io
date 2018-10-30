@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Burp Suite 学习总结"
-subtitle:   ""
+subtitle:   "此物实乃安全测试一大利器"
 date:       2018-05-14 15:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-hacker.jpg"
@@ -11,7 +11,7 @@ tags:
 ---
 
 
-最近在重新学习使用 Burp Suite，此物确实乃 Web 安全测试的一大利器。总结了一些较有用设置选项，可用于 SSL 抓包等。
+> 最近在重新学习使用 Burp Suite，此物确实乃 Web 安全测试的一大利器。总结了一些较有用设置选项，可用于 SSL 抓包等。
 
 # 0x00 Burp Suite 工作流程
 

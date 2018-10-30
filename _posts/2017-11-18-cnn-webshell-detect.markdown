@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "基于 CNN 的 Webshell 检测平台的设计与实现"
-subtitle:   "EagleEye/CNN"
+subtitle:   "https://github.com/gsfish/cnn-webshell-detect"
 date:       2017-11-18 18:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"

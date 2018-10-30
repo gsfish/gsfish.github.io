@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "博客部署优化实践"
-subtitle:   ""
+subtitle:   "没有最快，只有更快"
 date:       2018-05-26 17:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
