@@ -175,6 +175,7 @@ MFCUK（MiFare Classic Universal toolKit） 是一款基于 darkside 攻击原�
 ```
 sudo mfcuk -C -R {} -s 250 -S 250
 
+说明：
 {} 替换为待破解的扇区号，也可使用切片指定范围 0:A
 ```
 
@@ -194,6 +195,7 @@ sudo mfoc -O mycard.mfd
 ```
 sudo nfc-mfclassic W a mycard.mfd mycard.mfd f
 
+说明：
 W 为可写入 0 扇区（UID 卡）
 a 为使用 Key A 解密，遇错时退出
 第一个 mycard.mfd 为待写入的转储文件
