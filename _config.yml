@@ -3,8 +3,8 @@ title: gsfish's blog
 SEOTitle: gsfish | cat /dev/random > blog
 header-img: img/home-bg.jpg
 email: root@grassfish.net
-description: ""
-keyword: ""
+description: "安全开发 | 代码审计 | 漏洞挖掘 | 渗透测试"
+keyword: "gsfish, 草鱼"
 url: "https://www.grassfish.net"         # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -52,7 +52,7 @@ ga_domain: www.grassfish.net
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "信安在读生，在路上。"
+sidebar-about-description: "Red Teamer"
 sidebar-avatar: /img/avatar-gsfish.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
