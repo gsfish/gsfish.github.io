@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "内网安全之 ARP 欺骗"
-subtitle:   "使用 Kali Linux 下的 arpspoof, tcpdump, ferret, hamster 通过 ARP 攻击实现 Cookie 劫持"
+subtitle:   "内网姿势系列"
 date:       2016-06-23 21:32 +0800
 author:     "gsfish"
 header-img: "img/post-bg-kali.jpg"

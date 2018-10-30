@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "Django 性能优化实践"
-subtitle:   "// 多坑待填"
+subtitle:   "没有最快，只有更快  # 多坑待填"
 date:       2018-04-07 21:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
