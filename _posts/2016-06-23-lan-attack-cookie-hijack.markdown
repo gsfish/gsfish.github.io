@@ -58,7 +58,7 @@ sudo echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
 
-# 0x03 作战开始
+# 0x03 攻击过程
 
 ## 进行 ARP 欺骗
 
