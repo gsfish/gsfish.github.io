@@ -19,7 +19,7 @@ tags:
 
 # 0x01 设置选项
 
-## Proxy
+## Proxy 标签页
 
 参考官方文档 [Burp Proxy Options](https://portswigger.net/burp/help/proxy_options)
 
@@ -76,7 +76,7 @@ CA 的根证书、使用 `openssl` 生成的证书为自签名证书，客户端
 
 若 SSL 连接建立失败，则自动将该目标加入到列表中（下次忽略）。
 
-## Intruder
+## Intruder 标签页
 
 Intruder 在原始请求数据的基础上，通过修改各种请求参数，以获取不同的请求应答。每一次请求中，Intruder 通常会携带一个或多个 Payload，在不同的位置进行攻击重放，通过应答数据的比对分析来获得需要的特征数据。
 

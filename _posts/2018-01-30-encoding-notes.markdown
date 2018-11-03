@@ -127,6 +127,28 @@ for expression in expressions.split():
 
 处理文本的最佳实践是“Unicode 三明治”。对输入来说，要尽早把输入的字节序列解码成字符串。在程序的业务逻辑中只能处理字符串对象。对输出来说，要尽量晚地把字符串编码成字节序列。依赖默认编码可能会遇到麻烦，因此最好显示地指定编码方式。
 
+## Python 2 与 3
+
+由于 Python 2 一开始没有考虑到其他语言的需求，其默认编码为 `ascii`，处理对象为 `str`。Python 2 中的 `str` 与 Python 3 中的 `str` 并不相同，二者所处的位置可以说是相对的。Python 2 中的 `str` 对象存储字节码，而 Python 3 中的 `str` 对象存储 Unicode 码。
+
+在 Python 2.x 中：
+
+内存中处理的对象为 `str` 类型（每个符号为字节）。转换关系如下：
+
+```
+    str --- decode ---> unicode
+unicode --- encode ---> str
+```
+
+在 Python 3.x 中：
+
+内存中处理的对象为 `str` 类型（每个符号为 Unicode 码），涉及 IO 操作时处理的对象为 `bytes` 类型。转换关系如下：
+
+```
+bytes --- decode ---> str
+  str --- encode ---> bytes
+```
+
 
 # 0x06 Windows API 中的编码问题
 
