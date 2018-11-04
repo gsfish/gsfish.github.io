@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      "智能卡安全之 M1 卡破解"
-subtitle:   "入门篇，据说想出系列"
+title:      "LVM 容量调整日志"
+subtitle:   "lvresize 大法好"
 date:       2018-11-05 00:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
@@ -28,6 +28,12 @@ tags:
 +-----------------------------------------------------------------------+ +----------------+
 ```
 
+其中：
+
+* `/dev/mapper/cryptolvm` 为使用 `LUKS` 在 `/dev/sdb2` 创建，并写入了 LVM 的特殊头部的物理卷（PV）
+* `/dev/MyVol` 为卷组（VG）
+* `swap`、`root`、`home` 为逻辑卷（LV）
+
 由于 `root` 分区只分配了 40G，使用 `pacman` 更新系统时提示剩余空间不够（即使清理了所有软件包缓存…）：
 
 ```
@@ -39,7 +45,7 @@ tags:
 
 # 0x01 方案一：分别调整 FS 与 LV
 
-网上大部分关于 LVM 逻辑卷 resizing 的文章都是按照下面这个步骤来的，由于缩减文件系统容量时需要指定具体大小，实施起来不是很灵活：
+网上大部分关于 LVM 逻辑卷（LV） resizing 的文章都是按照下面这个步骤来的，由于缩减文件系统容量时需要指定具体大小，实施起来不是很灵活：
 
 打开加密卷：
 
@@ -66,7 +72,7 @@ lvreduce -L -10G /dev/MyVol/home
 3. 可选：使用 `e2fsck` 检查文件系统（排错）
 
 ```
-lvextend -L +10G /dev/MyVol/root
+lvextend -l +100%FREE /dev/MyVol/root
 resize2fs /dev/MyVol/root
 e2fsck -f /dev/MyVol/root
 ```
