@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "LVM 容量调整日志"
-subtitle:   "lvresize 大法好"
+subtitle:   "记一次因容量不足而引起的 LVM 调整"
 date:       2018-11-05 00:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
@@ -34,7 +34,7 @@ tags:
 * `/dev/MyVol` 为卷组（VG）
 * `/dev/MyVol/{swap,root,home}` 为逻辑卷（LV）
 
-由于 `root` 分区只分配了 40G，使用 `pacman` 更新系统时提示剩余空间不够（即使清理了所有软件包缓存…）：
+由于 `root` 分区目前只分配了 40G（调整过很多次），使用 `pacman` 更新系统时提示剩余空间不够…（即使清理了所有软件包缓存）：
 
 ```
 错误：分区 / 过满：需要 795917 个块，剩余 345532 个块
