@@ -32,7 +32,7 @@ tags:
 
 * `/dev/mapper/cryptolvm` 为使用 `LUKS` 在 `/dev/sdb2` 创建，并写入了 LVM 的特殊头部的物理卷（PV）
 * `/dev/MyVol` 为卷组（VG）
-* `swap`、`root`、`home` 为逻辑卷（LV）
+* `/dev/MyVol/{swap,root,home}` 为逻辑卷（LV）
 
 由于 `root` 分区只分配了 40G，使用 `pacman` 更新系统时提示剩余空间不够（即使清理了所有软件包缓存…）：
 
