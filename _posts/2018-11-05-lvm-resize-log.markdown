@@ -34,7 +34,7 @@ tags:
 * `/dev/MyVol` 为卷组（VG）
 * `/dev/MyVol/{swap,root,home}` 为逻辑卷（LV）
 
-由于 `root` 分区目前只分配了 40G（调整过很多次），使用 `pacman` 更新系统时提示剩余空间不够…（即使清理了所有软件包缓存）：
+由于 `root` 分区目前只分配了 40G（已调整多次），使用 `pacman` 更新系统时提示剩余空间不够（即使清理了所有软件包缓存…）：
 
 ```
 错误：分区 / 过满：需要 795917 个块，剩余 345532 个块
@@ -65,7 +65,7 @@ e2fsck -f /dev/MyVol/home
 lvreduce -L -10G /dev/MyVol/home
 ```
 
-扩容（与缩容相反）：
+扩容：
 
 1. 使用 `lvextend` / `lvresize` 扩大逻辑卷 B 的容量
 2. 使用 `resize2fs` 扩大逻辑卷 B 中文件系统的容量
