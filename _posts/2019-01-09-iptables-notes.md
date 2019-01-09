@@ -50,5 +50,5 @@ iptables 是一个配置 Linux 内核防火墙的命令行工具，可以检测�
 
 1. [Oskar Andreasson. Iptables 指南 1.1.19[EB/OL]. https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html](https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html)
 2. [朱双印. iptables详解：图文并茂理解iptables[EB/OL]. http://www.zsythink.net/archives/1199](http://www.zsythink.net/archives/1199)
-3. [Iptables (简体中文) - ArchWiki[EB/OL]. https://wiki.archlinux.org/index.php/Iptables_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6](https://wiki.archlinux.org/index.php/Iptables_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6)
+3. [Iptables (简体中文) - ArchWiki[EB/OL]. https://wiki.archlinux.org/index.php/Iptables_(简体中文)](https://wiki.archlinux.org/index.php/Iptables_(简体中文))
 
