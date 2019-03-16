@@ -52,7 +52,7 @@ ga_domain: www.grassfish.net
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Blue Teamer & Full stack developer"
+sidebar-about-description: "Blue Teamer"
 sidebar-avatar: /img/avatar-gsfish.jpg  # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
