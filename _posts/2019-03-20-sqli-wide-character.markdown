@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "SQL 注入之宽字符注入"
-subtitle:   "\xdf\x5c"
+subtitle:   "\ == 0x5C"
 date:       2019-03-20 23:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
@@ -35,7 +35,7 @@ MariaDB [(none)]> SHOW VARIABLES LIKE 'character%';
 
 其中各个变量的作用如下：
 
-* `character_set_client`：MySQL 服务端认为客户端连接所使用的编码（可使用 `SET NAMES 'utf8'` 临时更改）
+* `character_set_client`：MySQL 服务端认为客户端连接所使用的编码
 * `character_set_connection`：没有指定编码时 MySQL 服务端处理所使用的编码
 * `character_set_database`：创建数据库时，如果没有指定编码，默认的编码值
 * `character_set_results`：查询结果以这个编码发送给客户端
@@ -60,10 +60,12 @@ MariaDB [(none)]> SHOW VARIABLES LIKE 'character%';
 
 首先，MySQL 服务端会根据当前会话的 `character_set_client` 变量解码客户端传来的 SQL 语句。当该变量的值为 `gbk` 时，MySQL 会将符合 GBK 定义的双字节解码为汉字：首字节在 `81-FE` 范围内，尾字节在 `40-FE` 范围内。
 
-然后，假设攻击者使用 `\xdf'` 来逃逸单引号，后端对用户输入进行了转义，单引号 `'` 被 `\`（`\x5c`）转义，形成了 `\xdf\x5c'`。而 `\xdf` 在 `81-FE` 的范围之间，`\x5c` 在 `40-FE` 的范围之间，因此 `\xdf\x5c` 一起被解码为了一个汉字，`'` 摆脱了 `\`。
+然后，假设攻击者使用 `\xdf'` 来逃逸单引号，后端对用户输入进行了转义，单引号 `'` 被 `\`（`\x5c`）转义，形成了 `\xdf\x5c'`。而 `\xdf` 在 `81-FE` 的范围之间，`\x5c` 在 `40-FE` 的范围之间，因此 `\xdf\x5c` 一起被解码为一个汉字，使得 `'` 摆脱了 `\` 的转义。
 
-1. MySQL `character_set_client` 被配置为 `gbk`，业务使用 `addslashes()/mysql_escape_string()/magic_quotes_gpc` 转义用户输入
-2. 业务通过 `SET NAMES 'gbk'` 将连接字符集设置为 `gbk`，并使用 `addslashes()/mysql_escape_string()/magic_quotes_gpc` 转义用户输入
+漏洞产生的场景如下：
+
+1. MySQL `character_set_client` 被配置为 `gbk`，业务使用 `addslashes()` / `mysql_escape_string()` / `magic_quotes_gpc` 转义用户输入
+2. 业务通过 `SET NAMES 'gbk'` 将连接字符集设置为 `gbk`，并使用 `addslashes()` / `mysql_escape_string()` / `magic_quotes_gpc` 转义用户输入
 3. 业务直接使用 `mysql_real_escape_string()` 转义用户输入，但未通过 `mysql_set_charset()` 设置连接句柄的字符集（`SET NAMES` 无用）
 
 # 0x02 修复方案
