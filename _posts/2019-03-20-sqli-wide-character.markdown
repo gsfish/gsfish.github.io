@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      "SQL 注入之宽字符注入"
-subtitle:   "\ == 0x5C"
+subtitle:   "\\ == 0x5C"
 date:       2019-03-20 23:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
