@@ -201,7 +201,7 @@ d) 二类化样本标签。所使用模型中全连接层的输出维度为二�
 
 ## 3.3 模型训练
 
-采用 Tensorflow 作为深度学习引擎的后端，使用 tflearn 框架进行神经网络的构建。模型测试仅对模型进行 10 轮迭代训练。其中关键代码如下：
+采用 Tensorflow 作为深度学习引擎的后端，使用 tflearn 框架进行神经网络的构建。使用测试集对模型进行 10 轮迭代训练，学习率为 0.001。其中关键代码如下：
 
 ```python
 # 参数 seq_max_len 为已知 Opcodes 序列的最大长度
@@ -234,15 +234,25 @@ model.fit(x_train, y_train, n_epoch=10, shuffle=True, validation_set=0.1, batch_
 
 ## 3.3 检测结果
 
+混淆矩阵如下：
+
 |          | 预测结果 |      |
 | -------- | -------- | ---- |
 | 真实情况 | 恶意     | 正常 |
 | 恶意     | 314      | 11   |
 | 正常     | 38       | 299  |
 
-*表 2 检测结果的混淆矩阵*
+*表 2: 检测结果的混淆矩阵*
 
-准确率约：0.8872，召回率约：0.9645，F-score：0.9243。
+评估指标如下：
+
+| 项目                    | 结果   |
+| ----------------------- | ------ |
+| 精确率（Precision）     | 0.8872 |
+| 召回率（Recall）        | 0.9645 |
+| 综合评价指标（F-score） | 0.9243 |
+
+计算公式如下：
 
 $$ precision = \frac{TP}{TP + FP} $$
 
@@ -250,17 +260,17 @@ $$ recall = \frac{TP}{TP + FN} $$
 
 $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 
-*公式 1: 评估指标*
+*公式 1: 评估指标公式*
 
-通过 TensorBoard 得到了模型训练过程中 Accuracy 以及 Loss（交叉熵）的变化情况：
+通过 TensorBoard 得到了模型训练过程中准确率（Accuracy）以及交叉熵（Loss）的变化情况：
 
 ![accuracy_scalar.png](/img/cnn-webshell-detect/accuracy_scalar.png)
 
-*图 2 Accuracy 变化曲线*
+*图 2: 准确率变化曲线*
 
 ![loss_scalar.png](/img/cnn-webshell-detect/loss_scalar.png)
 
-*图 3 Loss 变化曲线*
+*图 3: 交叉熵变化曲线*
 
 
 # 参考文献
