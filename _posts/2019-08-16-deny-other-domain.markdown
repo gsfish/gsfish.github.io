@@ -1,4 +1,14 @@
-# 防范恶意域名解析
+---
+layout:     post
+title:      "防范恶意域名解析"
+subtitle:   ""
+date:       2019-08-16 18:00 +0800
+author:     "gsfish"
+header-img: "img/post-bg-07.jpg"
+tags:
+    - 运维安全
+---
+
 
 主要目的是通过配置 Web 服务器的方式，防范通过其他域名指向我们的服务器并访问的情况。
 
