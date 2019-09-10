@@ -6,7 +6,6 @@ date:       2018-02-10 14:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
 tags:
-    - 编程
     - Python
 ---
 

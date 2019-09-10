@@ -7,7 +7,6 @@ author:     "gsfish"
 header-img: "img/post-bg-wine.jpg"
 tags:
     - Linux
-    - 不务正业
 ---
 
 

@@ -6,8 +6,8 @@ date:       2019-03-20 23:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
 tags:
-    - Web 安全
-    - SQL 注入
+    - Web安全
+    - SQL注入
     - 渗透
 ---
 

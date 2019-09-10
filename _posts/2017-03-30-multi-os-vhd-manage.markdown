@@ -6,7 +6,7 @@ date:       2017-03-30 21:19 +0800
 author:     "gsfish"
 header-img: "img/post-bg-07.jpg"
 tags:
-    - VHD
+    - 运维
 ---
 
 

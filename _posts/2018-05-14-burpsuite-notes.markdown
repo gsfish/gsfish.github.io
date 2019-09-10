@@ -6,7 +6,7 @@ date:       2018-05-14 15:00 +0800
 author:     "gsfish"
 header-img: "img/post-bg-hacker.jpg"
 tags:
-    - BurpSuite
+    - Web安全
     - 渗透
 ---
 

@@ -6,8 +6,8 @@ date:       2018-04-07 21:30 +0800
 author:     "gsfish"
 header-img: "img/post-bg-python.jpg"
 tags:
-    - Django
     - Python
+    - Web开发
 ---
 
 
