@@ -9,19 +9,19 @@ header-img: img/post-bg-07.jpg
 tags:
 ---
 
-## JNI 线程安全解决方案
+## JNI 多线程访问共享对象方案
 
 参考资料：
 
 1. [How do you properly synchronize threads on the native side of a JNI environment](https://stackoverflow.com/questions/44420937/how-do-you-properly-synchronize-threads-on-the-native-side-of-a-jni-environment)
 2. [Android JNI 编程实践](https://www.jianshu.com/p/9b83cc5a5ba8)
 
-## ES 过滤聚合结果方案
+## ElasticSearch 过滤聚合结果方案
 
 参考资料：
 
 1. [ElasticSearch 如何先聚合后过滤](https://elasticsearch.cn/question/656)
-2. [ES 如何将聚合结果作为条件进行过滤](https://elasticsearch.cn/question/3581)
+2. [es 如何将聚合结果作为条件进行过滤](https://elasticsearch.cn/question/3581)
 
 ## PHP 报错：Can't use function return value in write context
 
@@ -69,7 +69,7 @@ C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\mariadb
 
 1. https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y/41854997#41854997
 
-## 在 windows 运行 celery task 报错：ValueError: not enough values to unpack (expected 3, got 0)
+## 在 Windows 运行 celery task 报错：ValueError: not enough values to unpack (expected 3, got 0)
 
 celery 4.x 后不再支持 windows，问题与底层的 billiard 相关（拖了 2 年，曾有人提过修复的 PR，不过作者似乎并不愿意 “修复”）
 
@@ -85,7 +85,7 @@ celery 4.x 后不再支持 windows，问题与底层的 billiard 相关（拖了
 3. https://github.com/celery/celery/issues/4081
 4. https://github.com/celery/celery/issues/4178
 
-# 删除 git 仓库中的子模块
+## 如何删除 git 仓库中的 submodule
 
 git 本身没有提供相应的命令，可通过以下步骤手动实现：
 
@@ -95,11 +95,11 @@ git rm --cached <path_to_submodule>
 git commit-m "Removed submodule"
 ```
 
-## 参考资料
+参考资料：
 
 1. https://gist.github.com/myusuf3/7f645819ded92bda6677
 
-## 修改 git 仓库中子模块的 url
+## 如何修改 git 仓库中 submodule 的 url
 
 修改 `.gitmodules` 文件中对应模块的 url 属性
 
@@ -109,7 +109,7 @@ git commit-m "Removed submodule"
 
 1. https://www.jianshu.com/p/ed0cb6c75e25
 
-## unitest.patch 无法多次 patch 同一对象
+## unitest.patch() 无法多次 patch 同一对象
 
 背景：
 
@@ -131,15 +131,15 @@ git commit-m "Removed submodule"
 
 1. https://stackoverflow.com/questions/5341147/how-to-patch-a-modules-internal-functions-with-mock
 
-## pyppeteer 无法 setCookie
+## pyppeteer 无法执行 setCookie()
 
-setCookie 时需指定对应的 url
+执行 `setCookie()` 时需为参数指定对应的 url
 
 参考资料：
 
 1. https://github.com/miyakogi/pyppeteer/issues/94
 
-## pyppeteer 访问部分站点时，会关闭与 chromium 的 websockets 连接：错误码 1006
+## pyppeteer 访问部分站点导致与 chromium 的 websockets 连接关闭：错误码 1006
 
 原因：
 
@@ -157,6 +157,8 @@ setCookie 时需指定对应的 url
 3. https://bugs.chromium.org/p/chromium/issues/detail?id=865002
 
 ## pyppeteer 在 scrapy 中同步执行，无法充分利用其异步特性
+
+pyppeteer 的并发特性是由 asyncio 以及 Python 3.6 提供的 async、await 关键字支持的，而 scrapy 的并发特性基于 twisted 框架，在使用中需手动做一些调整以让其兼容 asyncio
 
 参考资料：
 
