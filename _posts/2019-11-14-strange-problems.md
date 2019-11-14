@@ -1,7 +1,7 @@
 ---
 typora-root-url: ../
 layout:     post
-title:      各种疑难杂症
+title:      各种疑难杂症（持续更新）
 subtitle:   用于记录开发与运维过程中遇到的一些坑，希望可以帮助到有需要的人
 author:     gsfish
 date:       2019-11-14 19:00 +0800
