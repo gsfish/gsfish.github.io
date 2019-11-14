@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "在 Linux 下使用 QQ"
-subtitle:   "最近为了在 Linux 用上 QQ 折腾了好一阵子，特此记录"
+title:      在 Linux 下使用 QQ
+subtitle:   最近为了在 Linux 用上 QQ 折腾了好一阵子，特此记录
+author:     gsfish
 date:       2016-11-04 22:53 +0800
-author:     "gsfish"
-header-img: "img/post-bg-wine.jpg"
+header-img: img/post-bg-wine.jpg
 tags:
-    - Linux
+ - Linux
 ---
 
 

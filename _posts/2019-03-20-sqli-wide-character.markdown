@@ -1,15 +1,15 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "SQL 注入之宽字符注入"
-subtitle:   "\\ == 0x5C"
+title:      SQL 注入之宽字符注入
+subtitle:   \\ == 0x5C
+author:     gsfish
 date:       2019-03-20 23:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - Web安全
-    - SQL注入
-    - 渗透
+ - Web安全
+ - SQL注入
+ - 渗透
 ---
 
 
@@ -77,6 +77,6 @@ MariaDB [(none)]> SHOW VARIABLES LIKE 'character%';
 
 # 参考资料
 
-1. [phith0n. 浅析白盒审计中的字符编码及SQL注入[EB/OL]. https://www.leavesongs.com/PENETRATION/mutibyte-sql-inject.html](https://www.leavesongs.com/PENETRATION/mutibyte-sql-inject.html)
-2. [Laruence. 深入理解SET NAMES和mysql(i)_set_charset的区别[EB/OL]. http://www.laruence.com/2010/04/12/1396.html](http://www.laruence.com/2010/04/12/1396.html)
-3. [Laruence. 深入Mysql字符集设置[EB/OL]. http://www.laruence.com/2008/01/05/12.html](http://www.laruence.com/2008/01/05/12.html)
+1. https://www.leavesongs.com/PENETRATION/mutibyte-sql-inject.html
+2. http://www.laruence.com/2010/04/12/1396.html
+3. http://www.laruence.com/2008/01/05/12.html

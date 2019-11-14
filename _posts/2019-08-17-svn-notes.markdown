@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "SVN 学习笔记"
-subtitle:   ""
+title:      SVN 学习笔记
+subtitle:   
+author:     gsfish
 date:       2019-08-17 16:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - Linux
+ - Linux
 ---
 
 
@@ -218,4 +218,4 @@ svn list [-r REV] [SRC]
 
 # 参考资料
 
-1. [Subversion 版本控制 [草稿][EB/OL]. http://svnbook.red-bean.com/nightly/zh/svn-book.html#svn.advanced.props.special.ignore](http://svnbook.red-bean.com/nightly/zh/svn-book.html#svn.advanced.props.special.ignore)
+1. http://svnbook.red-bean.com/nightly/zh/svn-book.html#svn.advanced.props.special.ignore

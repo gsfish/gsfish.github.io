@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "QWBCTF 2018 Writeup"
-subtitle:   "QWB{xxxxxxxxxxxxx}"
+title:      QWBCTF 2018 Writeup
+subtitle:   QWB{xxxxxxxxxxxxx}
 date:       2018-03-26 22:00 +0800
-author:     "gsfish, ThTsOd, ydh"
-header-img: "img/post-bg-hacker.jpg"
+author:     ThTsOd, ydh, gsfish
+header-img: img/post-bg-hacker.jpg
 tags:
-    - CTF
+ - CTF
 ---
 
 

@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "LVM 容量调整日志"
-subtitle:   "记一次因容量不足而引起的 LVM 调整"
+title:      LVM 容量调整日志
+subtitle:   记一次因容量不足而引起的 LVM 调整
+author:     gsfish
 date:       2018-11-05 00:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - Linux
+ - Linux
 ---
 
 
@@ -104,6 +104,6 @@ lvresize -l +100%FREE -r /dev/MyVol/root
 
 # 参考文献
 
-1. [dm-crypt/Encrypting an entire system[EB/OL]. https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS)
-2. [LVM[EB/OL]. https://wiki.archlinux.org/index.php/LVM](https://wiki.archlinux.org/index.php/LVM#Resizing_volumes)
-3. [Resizing LVM-on-LUKS[EB/OL]. https://wiki.archlinux.org/index.php/Resizing_LVM-on-LUKS](https://wiki.archlinux.org/index.php/Resizing_LVM-on-LUKS)
+1. https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS
+2. https://wiki.archlinux.org/index.php/LVM#Resizing_volumes
+3. https://wiki.archlinux.org/index.php/Resizing_LVM-on-LUKS

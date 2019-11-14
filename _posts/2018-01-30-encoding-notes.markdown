@@ -1,14 +1,14 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "字符编码学习总结"
-subtitle:   "Humans use text. Computers speak bytes."
+title:      字符编码学习总结
+subtitle:   Humans use text. Computers speak bytes.
+author:     gsfish
 date:       2018-01-30 18:30 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - Python
-    - 编码
+ - Python
+ - 编码
 ---
 
 
@@ -188,12 +188,12 @@ int MessageBoxW(HWND hWnd, const wchar_t* lpText, const wchar_t* lpCaption, unsi
 ```
 
 
-# 参考文献
+# 参考资料
 
-1. [Unicode - 维基百科，自由的百科全书[EB/OL]. https://zh.wikipedia.org/zh-hans/Unicode](https://zh.wikipedia.org/zh-hans/Unicode)
-2. [UTF-8 - 维基百科，自由的百科全书[EB/OL]. https://zh.wikipedia.org/wiki/UTF-8](https://zh.wikipedia.org/wiki/UTF-8)
-3. [UTF-16 - 维基百科，自由的百科全书[EB/OL]. https://zh.wikipedia.org/wiki/UTF-16](https://zh.wikipedia.org/wiki/UTF-16)
-4. [字节顺序标记 - 维基百科，自由的百科全书[EB/OL]. https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F](https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F)
-5. [Luciano Ramalho. 流畅的Python[M]. 北京: 人民邮电出版社, 2017](https://www.amazon.cn/dp/B072HMKKPG)
-6. [Difference between MBCS and UTF-8 on Windows[EB/OL]. https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)
-7. [Why isn't UTF-8 allowed as the "ANSI" code page?[EB/OL]. https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows](https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows)
+1. https://zh.wikipedia.org/zh-hans/Unicode
+2. https://zh.wikipedia.org/wiki/UTF-8
+3. https://zh.wikipedia.org/wiki/UTF-16
+4. https://zh.wikipedia.org/wiki/%E4%BD%8D%E5%85%83%E7%B5%84%E9%A0%86%E5%BA%8F%E8%A8%98%E8%99%9F
+5. https://www.amazon.cn/dp/B072HMKKPG
+6. https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows
+7. https://stackoverflow.com/questions/3298569/difference-between-mbcs-and-utf-8-on-windows

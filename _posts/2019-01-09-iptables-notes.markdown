@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "iptables 学习笔记"
-subtitle:   ""
+title:      iptables 学习笔记
+subtitle:   
+author:     gsfish
 date:       2019-01-09 22:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - Linux
+ - Linux
 ---
 
 
@@ -160,6 +160,6 @@ target 有以下几种：
 
 # 参考资料
 
-1. [Oskar Andreasson. Iptables 指南 1.1.19[EB/OL]. https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html](https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html)
-2. [朱双印. iptables详解：图文并茂理解iptables[EB/OL]. http://www.zsythink.net/archives/1199](http://www.zsythink.net/archives/1199)
-3. [Iptables (简体中文) - ArchWiki[EB/OL]. https://wiki.archlinux.org/index.php/Iptables_(简体中文)](https://wiki.archlinux.org/index.php/Iptables_(简体中文))
+1. https://www.frozentux.net/iptables-tutorial/cn/iptables-tutorial-cn-1.1.19.html
+2. http://www.zsythink.net/archives/1199
+3. https://wiki.archlinux.org/index.php/Iptables_(简体中文)

@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "智能卡安全之 M1 卡破解"
-subtitle:   "入门篇，不知道能不能出系列"
+title:      智能卡安全之 M1 卡破解
+subtitle:   入门篇，不知道能不能出系列
+author:     gsfish
 date:       2018-10-30 21:30 +0800
-author:     "gsfish"
-header-img: "img/post-bg-hacker.jpg"
+header-img: img/post-bg-hacker.jpg
 tags:
-    - 无线安全
+ - 无线安全
 ---
 
 
@@ -205,6 +205,6 @@ a 为使用 Key A 解密，遇错时退出
 
 # 参考文献
 
-1. [hodit. RFID 破解基础详解[EB/OL]. https://mp.weixin.qq.com/s?__biz=MzI5MDQ2NjExOQ==&mid=2247488354&idx=1&sn=be1205869e1be6bf5df3b3f2132d2969](https://mp.weixin.qq.com/s?__biz=MzI5MDQ2NjExOQ==&mid=2247488354&idx=1&sn=be1205869e1be6bf5df3b3f2132d2969)
-2. [FanZheng. Mifare Classic 1K智能卡介绍及nfc-tools的使用. https://fanzheng.org/archives/30](https://fanzheng.org/archives/30)
-3. [Uranus Zhou. 复制MIFARE Classic小区门禁卡记录[EB/OL]. https://zohead.com/archives/copy-mifare-classic/](https://zohead.com/archives/copy-mifare-classic/)
+1. https://mp.weixin.qq.com/s?__biz=MzI5MDQ2NjExOQ==&mid=2247488354&idx=1&sn=be1205869e1be6bf5df3b3f2132d2969
+2. https://fanzheng.org/archives/30
+3. https://zohead.com/archives/copy-mifare-classic/

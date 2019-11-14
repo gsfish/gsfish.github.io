@@ -1,14 +1,14 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "关于 Python 中主线程响应 SIGINT 解决方案"
-subtitle:   "由于主线程开小差而引发的一个问题"
+title:      关于 Python 中主线程响应 SIGINT 解决方案
+subtitle:   由于主线程开小差而引发的一个问题
+author:     gsfish
 date:       2017-03-27 12:56 +0800
-author:     "gsfish"
-header-img: "img/post-bg-python.jpg"
+header-img: img/post-bg-python.jpg
 tags:
-    - 并发
-    - Python
+ - 并发
+ - Python
 ---
 
 
@@ -155,8 +155,8 @@ if __name__ == '__main__':
 最后一想，其实貌似没必要这么麻烦。于是把 PoC 和 Exploit 设置为守护线程，并直接将爬虫作为主线程。
 
 
-# 参考文献
+# 参考资料
 
-1. [Python中用Ctrl+C终止多线程程序的问题解决[EB/OL]. http://www.jb51.net/article/35165.htm](http://www.jb51.net/article/35165.htm)
-2. [ace_fei. python多线程ctrl-c退出问题[EB/OL]. http://blog.csdn.net/ace_fei/article/details/8899333](http://blog.csdn.net/ace_fei/article/details/8899333)
-3. [cdwyd. Python 多线程响应 ctrl+c 优雅退出的方式[EB/OL]. https://www.v2ex.com/t/323676](https://www.v2ex.com/t/323676)
+1. http://www.jb51.net/article/35165.htm
+2. http://blog.csdn.net/ace_fei/article/details/8899333
+3. https://www.v2ex.com/t/323676

@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "HCTF 2016 Writeup"
-subtitle:   "hctf{xxxxxxxxxxxxx}"
+title:      HCTF 2016 Writeup
+subtitle:   hctf{xxxxxxxxxxxxx}
+author:     gsfish
 date:       2016-11-28 00:53 +0800
-author:     "gsfish"
-header-img: "img/post-bg-hacker.jpg"
+header-img: img/post-bg-hacker.jpg
 tags:
-    - CTF
+ - CTF
 ---
 
 

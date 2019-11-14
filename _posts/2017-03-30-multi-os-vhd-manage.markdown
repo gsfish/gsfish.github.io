@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "使用 VirtualBox + VHD 管理多系统"
-subtitle:   "实体机多系统新姿势"
+title:      使用 VirtualBox + VHD 管理多系统
+subtitle:   实体机多系统新姿势
+author:     gsfish
 date:       2017-03-30 21:19 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg"
 tags:
-    - 运维
+ - 运维
 ---
 
 

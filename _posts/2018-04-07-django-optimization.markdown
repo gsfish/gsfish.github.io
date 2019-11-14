@@ -1,14 +1,14 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "Django 性能优化实践"
-subtitle:   "没有最快，只有更快  # 多坑待填"
+title:      Django 性能优化实践
+subtitle:   没有最快，只有更快  # 多坑待填
+author:     gsfish
 date:       2018-04-07 21:30 +0800
-author:     "gsfish"
-header-img: "img/post-bg-python.jpg"
+header-img: img/post-bg-python.jpg
 tags:
-    - Python
-    - Web开发
+ - Python
+ - Web开发
 ---
 
 
@@ -189,6 +189,6 @@ Percentage of the requests served within a certain time (ms)
 
 # 参考文献
 
-1. [xianglong. Django运行方式及处理流程总结[EB/OL]. http://python.jobbole.com/80836/](http://python.jobbole.com/80836/)
-2. [小屋子大侠. Django源码分析2:本地运行runserver分析[EB/OL]. https://blog.csdn.net/qq_33339479/article/details/78873786](https://blog.csdn.net/qq_33339479/article/details/78873786)
-3. [Henry Z. Django 性能优化官方文档笔记(主要针对ORM)[EB/OL]. https://changchen.me/blog/20170503/django-performance-and-optimisation/](https://changchen.me/blog/20170503/django-performance-and-optimisation/)
+1. http://python.jobbole.com/80836/
+2. https://blog.csdn.net/qq_33339479/article/details/78873786
+3. https://changchen.me/blog/20170503/django-performance-and-optimisation/

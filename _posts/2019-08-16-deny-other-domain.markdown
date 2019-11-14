@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "防范恶意域名解析"
-subtitle:   ""
+title:      防范恶意域名解析
+subtitle:   
 date:       2019-08-16 18:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+author:     gsfish
+header-img: img/post-bg-07.jpg
 tags:
-    - 运维安全
+ - 运维安全
 ---
 
 
@@ -80,5 +80,5 @@ Apache 配置示例的官方文档 [在此](https://httpd.apache.org/docs/curren
 
 ## 参考资料
 
-1. [大东东东. 防止独立IP被其它恶意域名恶意解析[EB/OL]. https://www.cnblogs.com/dadonggg/p/8398112.html](https://www.cnblogs.com/dadonggg/p/8398112.html)
-2. [VirtualHost Examples - Apache HTTP Server Version 2.4[EB/OL]. https://httpd.apache.org/docs/current/vhosts/examples.html](https://httpd.apache.org/docs/current/vhosts/examples.html)
+1. https://www.cnblogs.com/dadonggg/p/8398112.html
+2. https://httpd.apache.org/docs/current/vhosts/examples.html

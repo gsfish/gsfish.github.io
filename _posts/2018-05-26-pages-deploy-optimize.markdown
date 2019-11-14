@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "博客部署优化实践"
-subtitle:   "没有最快，只有更快"
+title:      博客部署优化实践
+subtitle:   没有最快，只有更快
+author:     gsfish
 date:       2018-05-26 17:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - 运维
+ - 运维
 ---
 
 
@@ -100,5 +100,5 @@ date: Sat, 26 May 2018 08:54:27 GMT
 
 # 参考文献
 
-1. [蒋海云. Coding.net上建立镜像解决Github Pages博客百度无法收录问题[EB/OL]. http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/](http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/)
-2. [Pushing code to two remotes[EB/OL]. https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remote](https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes)
+1. http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/
+2. https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes

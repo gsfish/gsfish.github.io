@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "基于 CNN 的 Webshell 检测平台的设计与实现"
-subtitle:   "https://github.com/gsfish/cnn-webshell-detect"
+title:      基于 CNN 的 Webshell 检测平台的设计与实现
+subtitle:   https://github.com/gsfish/cnn-webshell-detect
+author:     gsfish
 date:       2017-11-18 18:30 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - 机器学习
+ - 机器学习
 ---
 
 
@@ -274,10 +274,10 @@ $$ \text{F-score} = 2 \frac{precision \times recall}{precision + recall} $$
 *图 3: 交叉熵变化曲线*
 
 
-# 参考文献
+# 参考资料
 
-* [兜哥. 基于机器学习的 Webshell 发现技术探索[EB/OL]. https://segmentfault.com/a/1190000011112448](https://segmentfault.com/a/1190000011112448)
-* [蔡慧苹,王丽丹,段书凯.基于word embedding和CNN的情感分类模型[J].计算机应用研究,2016,33(10):2902-2905+2909.](http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=)
-* [TIPI. 深入理解 PHP 内核[EB/OL]. http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode](http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode)
-* [思源. 听说你了解深度学习最常用的学习算法：Adam 优化算法？[EB/OL]. https://www.jiqizhixin.com/articles/2017-07-12](https://www.jiqizhixin.com/articles/2017-07-12)
-* [Dropout: A Simple Way to Prevent Neural Networks from Overfitting. N. Srivastava, G. Hinton, A. Krizhevsky, I. Sutskever & R. Salakhutdinov, (2014), Journal of Machine Learning Research, 5(Jun)(2), 1929-1958.](https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf)
+* https://segmentfault.com/a/1190000011112448
+* http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2016&filename=JSYJ201610006&uid=WEEvREcwSlJHSldRa1FhcTdWZDhML2VjWFFSRUs4eGJvZ0dJbVRsQXczQT0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4ggI8Fm4gTkoUKaID8j8gFw!!&v=MTg5NTJGeXJrVnJ2Skx6N1NaTEc0SDlmTnI0OUZZb1I4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkwyZVp1UnY=
+* http://www.php-internals.com/book/?p=chapt02/02-03-02-opcode
+* https://www.jiqizhixin.com/articles/2017-07-12
+* https://www.cs.toronto.edu/~hinton/absps/JMLRdropout.pdf

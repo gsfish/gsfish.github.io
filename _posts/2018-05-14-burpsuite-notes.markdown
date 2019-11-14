@@ -1,14 +1,14 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "Burp Suite 学习总结"
-subtitle:   "此物实乃安全测试一大利器"
+title:      Burp Suite 学习总结
+subtitle:   此物实乃安全测试一大利器
+author:     gsfish
 date:       2018-05-14 15:00 +0800
-author:     "gsfish"
-header-img: "img/post-bg-hacker.jpg"
+header-img: img/post-bg-hacker.jpg
 tags:
-    - Web安全
-    - 渗透
+ - Web安全
+ - 渗透
 ---
 
 
@@ -182,5 +182,5 @@ Intruder 在原始请求数据的基础上，通过修改各种请求参数，�
 
 # 参考文献
 
-1. [t0data. Burp Suite 实战指南[EB/OL]. https://www.gitbook.com/book/t0data/burpsuite](https://www.gitbook.com/book/t0data/burpsuite)
-2. [Burp Suite Documentation[EB/OL]. https://portswigger.net/burp/help/contents](https://portswigger.net/burp/help/contents)
+1. https://www.gitbook.com/book/t0data/burpsuite
+2. https://portswigger.net/burp/help/contents

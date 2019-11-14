@@ -1,13 +1,13 @@
 ---
-typora-root-url: ../img
+typora-root-url: ../
 layout:     post
-title:      "某科学上网插件分析"
-subtitle:   "穿越_v2.1"
+title:      某科学上网插件分析
+subtitle:   穿越_v2.1
+author:     gsfish
 date:       2017-09-04 15:33 +0800
-author:     "gsfish"
-header-img: "img/post-bg-07.jpg"
+header-img: img/post-bg-07.jpg
 tags:
-    - 逆向
+ - 逆向
 ---
 
 
