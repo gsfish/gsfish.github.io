@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../
 layout:     post
 title:      内网安全之 ARP 欺骗
 subtitle:   内网姿势系列
@@ -71,15 +72,15 @@ sudo arpspoof -i eth0 -t 192.168.1.1 192.168.1.105
 -t  攻击目标的 IP（由于是单向的，所以需要开启两个）
 ```
 
-![01.png](img/lan-attack-cookie-hijack/01.png)
+![01.png](/img/lan-attack-cookie-hijack/01.png)
 
-![02.png](img/lan-attack-cookie-hijack/02.png)
+![02.png](/img/lan-attack-cookie-hijack/02.png)
 
 这两个窗口在攻击过程中要一直保持。然后进入靶机，打开命令提示符：
 
 `arp -a`
 
-![03.png](img/lan-attack-cookie-hijack/03.png)
+![03.png](/img/lan-attack-cookie-hijack/03.png)
 
 可以看到 ARP 缓存表中网关的 MAC 已经变成攻击者的了，取得初步胜利~
 
@@ -96,7 +97,7 @@ tcp port 80 and host 192.168.1.105  抓取通过 192.168.1.105:80 的数据包
 
 等待目标用户登陆网站或访问任何登陆后的页面，于是就可以抓到含有 Cookie 的 HTTP 数据包了。过一段时间后停止抓取（这只能抓取 HTTP 流量，如果网站启用了 HTTPS 就需要采用新的姿势了，例如 SSLstrip）。
 
-![04.png](img/lan-attack-cookie-hijack/04.png)
+![04.png](/img/lan-attack-cookie-hijack/04.png)
 
 在家目录下会生成一个 `cookie.cap` 文件，这就是我们一直在抓的数据包了。然而现在我们还看不懂其中的内容，需要用 `ferret` 来解析一下。
 
@@ -110,7 +111,7 @@ ferret -r cookie.cap
 -i  所用的网卡设备名（其实 ferret 也有抓包的功能）
 ```
 
-![05.png](img/lan-attack-cookie-hijack/05.png)
+![05.png](/img/lan-attack-cookie-hijack/05.png)
 
 此时数据包中的内容已被解析并保存到了家目录中的 `hamster.txt`。
 
@@ -124,19 +125,19 @@ hamster
 
 `hamster` 是一个十分高效的工具，直接输入命令即可打开。虽然 Firefox 的一些插件自定义 Cookie，但 `hamster` 能很方便地把我们生成的 `hamster.txt` 中的 Cookie 信息自动导入到浏览器中：
 
-![06.png](img/lan-attack-cookie-hijack/06.png)
+![06.png](/img/lan-attack-cookie-hijack/06.png)
 
 打开浏览器，设置代理为 `127.0.0.1`，端口 `1234`：
 
-![07.png](img/lan-attack-cookie-hijack/07.png)
+![07.png](/img/lan-attack-cookie-hijack/07.png)
 
 在地址栏输入 `127.0.0.1:1234`。点击 `192.168.1.105`，接着出现以下页面：
 
-![08.png](img/lan-attack-cookie-hijack/08.png)
+![08.png](/img/lan-attack-cookie-hijack/08.png)
 
 在左侧栏我们看到了 `http://weibo.com/...`。点击链接，成功利用目标用户的 Cookie 登陆器其新浪微博。把这个地址复制到地址栏后就可以正常使用其微博的所有功能啦：
 
-![09.png](img/lan-attack-cookie-hijack/09.png)
+![09.png](/img/lan-attack-cookie-hijack/09.png)
 
 
 # 0x04 防御 ARP 欺骗
