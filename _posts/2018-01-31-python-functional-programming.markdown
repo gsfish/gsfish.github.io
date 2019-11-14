@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "Python 中的函数式编程"
 subtitle:   "Python 中一切好的特性都是从其他语言中借鉴来的"

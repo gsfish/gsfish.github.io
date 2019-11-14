@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "HCTF 2016 Writeup"
 subtitle:   "hctf{xxxxxxxxxxxxx}"

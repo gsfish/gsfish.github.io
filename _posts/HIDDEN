@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "基于 CNN 的 Webshell 检测平台的设计与实现"
 subtitle:   "https://github.com/gsfish/cnn-webshell-detect"
@@ -123,7 +124,7 @@ for index, code in enumerate(codes_seq):
 
 ```python
 max_length = len(reduce(lambda x, y: x if len(x) > len(y) else y, codes_seqs))
- ```
+```
 *代码 7: 寻找最大的序列长度*
 
 最后对测试样本所属的标签进行二类化转换：

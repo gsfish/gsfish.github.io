@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "Burp Suite 学习总结"
 subtitle:   "此物实乃安全测试一大利器"

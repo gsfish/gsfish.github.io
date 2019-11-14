@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "使用 VirtualBox + VHD 管理多系统"
 subtitle:   "实体机多系统新姿势"

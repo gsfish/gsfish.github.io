@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "Django 性能优化实践"
 subtitle:   "没有最快，只有更快  # 多坑待填"

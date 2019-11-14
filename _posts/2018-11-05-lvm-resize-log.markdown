@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "LVM 容量调整日志"
 subtitle:   "记一次因容量不足而引起的 LVM 调整"

@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "SQL 注入之宽字符注入"
 subtitle:   "\\ == 0x5C"

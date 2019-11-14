@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "博客部署优化实践"
 subtitle:   "没有最快，只有更快"

@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "在 Linux 下使用 QQ"
 subtitle:   "最近为了在 Linux 用上 QQ 折腾了好一阵子，特此记录"

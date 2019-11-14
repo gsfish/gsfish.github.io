@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "内网安全之 ARP 欺骗"
 subtitle:   "内网姿势系列"

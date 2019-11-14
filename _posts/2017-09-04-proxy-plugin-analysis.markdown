@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "某科学上网插件分析"
 subtitle:   "穿越_v2.1"

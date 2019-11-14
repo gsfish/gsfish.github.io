@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "字符编码学习总结"
 subtitle:   "Humans use text. Computers speak bytes."

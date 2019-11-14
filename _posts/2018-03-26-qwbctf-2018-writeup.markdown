@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "QWBCTF 2018 Writeup"
 subtitle:   "QWB{xxxxxxxxxxxxx}"

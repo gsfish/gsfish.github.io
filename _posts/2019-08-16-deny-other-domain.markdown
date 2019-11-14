@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "防范恶意域名解析"
 subtitle:   ""

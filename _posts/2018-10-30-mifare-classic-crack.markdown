@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "智能卡安全之 M1 卡破解"
 subtitle:   "入门篇，不知道能不能出系列"

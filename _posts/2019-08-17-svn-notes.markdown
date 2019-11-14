@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "SVN 学习笔记"
 subtitle:   ""

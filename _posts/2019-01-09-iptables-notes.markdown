@@ -1,4 +1,5 @@
 ---
+typora-root-url: ../img
 layout:     post
 title:      "iptables 学习笔记"
 subtitle:   ""
