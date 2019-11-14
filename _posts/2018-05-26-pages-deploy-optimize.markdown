@@ -98,7 +98,7 @@ date: Sat, 26 May 2018 08:54:27 GMT
 于是乎，现已成功更改为上述方案。本来想把 DNS 服务器改为 Cloudfare 的，顺便使用 CDN，不过 Cloudfare 的免费版并不支持国内外分线路解析（需要 Enterprise），因此作罢。
 
 
-# 参考文献
+# 参考资料
 
 1. http://www.atjiang.com/coding.net-pages-as-github-pages-mirror-for-baidu/
 2. https://stackoverflow.com/questions/14290113/git-pushing-code-to-two-remotes

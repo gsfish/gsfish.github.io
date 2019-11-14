@@ -11,7 +11,7 @@ tags:
 ---
 
 
-## 0x00 前言
+# 0x00 前言
 
 由于目前腾讯已经停止了对 Linux 版 QQ 的支持，那么我们只好自己动手把小企鹅搬到 Linux 下了。
 
@@ -23,7 +23,7 @@ tags:
 个人比较偏向于第二种解决方案，因为为了使用 QQ 而开一个虚拟机太浪费资源了。
 
 
-## 0x01 使用 VirtualBox
+# 0x01 使用 VirtualBox
 
 要开启的无缝模式，首先需要在 VirtualBox 里加载一个叫 [Oracle VM VirtualBox Extension Pack](https://www.virtualbox.org/wiki/Downloads) 的增强包（版本要和本机的 VirtualBox 一致，否则会安装失败），然后在 Windows 虚拟机里安装增强功能。
 
@@ -34,7 +34,7 @@ tags:
 而且每次点击 QQ 会进入到 Windows 的桌面环境，需要把 Windows 的任务栏缩下去，看来这样实在不是长久之计。
 
 
-## 0x02 使用 Wine
+# 0x02 使用 Wine
 
 Wine 是个好东西，根据百度百科，“Wine 不是 Windows 模拟器，而是运用 API 转换技术做出 Linux 对应到 Windows 相对应的函数来调用 DLL 以运行 Windows 程序”。用 Wine 运行 QQ 与原系统共用硬件资源，所以相比虚拟机来说肯定是个更好的选择。
 
@@ -51,6 +51,7 @@ Wine 的使用很简单，比如你下了一个 Windows 应用的安装包，直
 这里有个小插曲。由于我目前用的 Ubuntu 16.04 的源里 Wine 最新的版本号是 1.6，而现在 Wine 现在已经更新到 1.9 了，用 `winetricks-zh` 装 QQ 的时候遇到了一些 BUG 导致安装失败。最终添加了 Wine 官方的 PPA 仓库后把 Wine 卸载并安装了另一个版本才得以解决。
 
 ![03.png](/img/linux-use-qq/03.png)
-*变相秀一把桌面~*
+
+> 变相秀一把桌面~
 
 目前运行在 Wine 下的 QQ 还没崩过，Wine 环境下的 `我的文档` 能与家目录下的 `Documents` 形成映射，而且消息还能收进通知栏，使用体验良好。

@@ -203,7 +203,7 @@ a 为使用 Key A 解密，遇错时退出
 第二个 mycard.mfd f 为包含密钥的转储文件
 ```
 
-# 参考文献
+# 参考资料
 
 1. https://mp.weixin.qq.com/s?__biz=MzI5MDQ2NjExOQ==&mid=2247488354&idx=1&sn=be1205869e1be6bf5df3b3f2132d2969
 2. https://fanzheng.org/archives/30

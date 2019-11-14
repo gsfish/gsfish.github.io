@@ -102,7 +102,7 @@ lvresize -l +100%FREE -r /dev/MyVol/root
 ```
 
 
-# 参考文献
+# 参考资料
 
 1. https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS
 2. https://wiki.archlinux.org/index.php/LVM#Resizing_volumes
