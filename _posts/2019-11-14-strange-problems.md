@@ -69,6 +69,16 @@ C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\mariadb
 
 1. https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y/41854997#41854997
 
+# Celery Task 中无法创建子进程
+
+解决方案：
+
+使用 `billiard.context.Process` 代替 `multiprocessing.Process`
+
+参考资料：
+
+1. https://github.com/celery/celery/issues/4551
+
 ## 在 Windows 运行 celery task 报错：`ValueError: not enough values to unpack (expected 3, got 0)`
 
 celery 4.x 后不再支持 windows，问题与底层的 billiard 相关（拖了 2 年，曾有人提过修复的 PR，不过作者似乎并不愿意 “修复”）
