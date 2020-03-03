@@ -4,7 +4,7 @@ layout:     post
 title:      各种疑难杂症（持续更新）
 subtitle:   用于记录开发与运维过程中遇到的一些坑，希望可以帮助到有需要的人
 author:     gsfish
-date:       2019-11-14 19:00 +0800
+date:       2020-03-03 12:00 +0800
 header-img: img/post-bg-07.jpg
 tags:
 ---
@@ -69,7 +69,7 @@ C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\mariadb
 
 1. https://stackoverflow.com/questions/31746182/docker-compose-wait-for-container-x-before-starting-y/41854997#41854997
 
-# Celery Task 中无法创建子进程
+## Celery Task 中无法创建子进程
 
 解决方案：
 
@@ -78,6 +78,17 @@ C:\Program Files (x86)\MySQL\MySQL Connector C 6.1\lib\mariadb
 参考资料：
 
 1. https://github.com/celery/celery/issues/4551
+
+## Celery ResultSet调用设置了callback的get方法时阻塞
+
+原因 ：
+
+ResultSet.on_ready为一个vine.promise对象，未调用前会一直轮询结果状态
+
+解决方案（选其一）：
+
+1. 改用由group()返回的GroupResult
+2. 传入on_interval参数：`lambda: rs._on_ready() if rs.ready() else None`
 
 ## 在 Windows 运行 celery task 报错：`ValueError: not enough values to unpack (expected 3, got 0)`
 
@@ -174,3 +185,16 @@ pyppeteer 的并发特性是由 asyncio 以及 Python 3.6 提供的 async、awai
 
 1. https://github.com/lopuhin/scrapy-pyppeteer
 2. https://www.lizenghai.com/archives/24943.html
+
+## 使用winetricks安装中文应用时，安装fakechinese后中文仍显示为方块
+
+参考资料：
+
+将 `LANG` 设置为 zh-CN 后再运行 winetricks：
+
+```
+env LANG=zh_CN.UTF-8 winetricks
+```
+
+1. http://linux-wiki.cn/wiki/zh-hans/Wine%E7%9A%84%E4%B8%AD%E6%96%87%E6%98%BE%E7%A4%BA%E4%B8%8E%E5%AD%97%E4%BD%93%E8%AE%BE%E7%BD%AE
+2. https://blog.csdn.net/mhlwsk/article/details/51919916
